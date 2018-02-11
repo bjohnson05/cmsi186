@@ -18,6 +18,8 @@
  *           -----  ----------  ------------  -----------------------------------------------------------
  *  @version 1.0.0  2017-01-25  B.J. Johnson  Initial writing and release
  *  @version 2.0.0  2017-02-08  B.J. Johnson  Added code to run tests, based on CalendareStuffTester.java
+ *  @version 2.0.1  2018-02-03  B.J. Johnson  Updated to correct a missing character in one test
+ *                                              also tests for "removeDupes()" commented out, not required
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 public class StringStuffTester {
