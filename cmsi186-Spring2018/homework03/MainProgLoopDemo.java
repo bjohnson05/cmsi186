@@ -38,7 +38,8 @@ public class MainProgLoopDemo{
             System.out.println( "   You typed: " + inputLine );
             if( 'q' == inputLine.charAt(0) ) {
                break;
-            }         }
+            }
+         }
          catch( IOException ioe ) {
             System.out.println( "Caught IOException" );
          }
