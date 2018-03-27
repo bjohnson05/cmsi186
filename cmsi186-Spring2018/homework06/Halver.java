@@ -7,8 +7,8 @@
  *                The number is treated as an integer, and the division result is also an integer with no
  *                remainder taken into account.  This is intended as a prototype to demonstrate a method
  *                ["byte-based"] for doing "halving" which is needed for Russian Peasant Multiplication
- *                for the "GinormousInt" programming assignment, if the student wishes to do multiplication
- *                using that method.
+ *                for the "BrobdingnagianInt" programming assignment, if the student wishes to implement
+ *                multiplication using that method.
  * Notes      :  None
  * Warnings   :  None
  *
@@ -39,7 +39,7 @@ public class Halver {
    *  @param  c  byte array containing the data to display
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public void toArray( byte[] c ) {
-      System.out.println( Arrays.toString( c ) );
+      System.out.println( "array value is: " + Arrays.toString( c ) );
    }
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -73,12 +73,15 @@ public class Halver {
          }
       }
 
+     // remove leading zero if present
+      int start = 0;
+      if( 0 == b[0] ) {
+         start = 1;
+      }
+
      // build the result string to pass back
       result = new StringBuffer();
-      for( int i = 0; i < a.length - 1; i++ ) {
-         if( 0 == b[i] ) {
-            continue;
-         }
+      for( int i = start; i < a.length - 1; i++ ) {
          result = result.append( (int)b[i] );
       }
       return new String( result );
