@@ -20,6 +20,7 @@
  *                                    field and "makeTwoDigits" method to implement automated test count
  *                                    during test runs; added tests for the "isImpossible" method and the
  *                                    "hashCode" method
+ *  1.2.0  2018-04-16  B.J. Johnson  Added a few more tests to verify six- and ten-tuples
  *
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -33,8 +34,6 @@ public class TupleTestHarness {
    *  the main method which calls all the test methods
    */
    public static void main(String[] args) {
-      attempts  = 0;
-      successes = 0;
 
       test_toString();
       test_setElement();
@@ -82,7 +81,7 @@ public class TupleTestHarness {
    *   supposed to fail on purpose [that's a guess]
    */
    private static void displayFailure() {
-      displaySuccessIfTrue( false);
+      displaySuccessIfTrue( false );
    }
 
   /**
@@ -240,7 +239,7 @@ public class TupleTestHarness {
    }
 
   /**
-   *  method to test adding two tuples together.  Only one test, but theoreticall
+   *  method to test adding two tuples together.  Only one test, but theoretically
    *   should test a lot of different sizes, not just "three-Tuples"
    */
    public static void test_add() {
@@ -358,6 +357,26 @@ public class TupleTestHarness {
          System.out.print  ( "  Expecting: length == 3: " );
          Tuple t1 = new Tuple(new int[] { -1, 0, 2 });
          displaySuccessIfTrue( 3 == t1.length() );
+      } catch( Exception e ) {
+         e.printStackTrace();
+         displayFailure();
+      }
+
+      try {
+         System.out.println( "Test " + makeTwoDigits() + "    : testing length on '<13,11,23,19,5,29>' [six-Tuple]:" );
+         System.out.print  ( "  Expecting: 'true': " );
+         Tuple t4 = new Tuple(new int[] { 13, 11, 23, 19, 5, 29 });
+         displaySuccessIfTrue( 6 == t4.length() );
+      } catch( Exception e ) {
+         e.printStackTrace();
+         displayFailure();
+      }
+
+      try {
+         System.out.println( "Test " + makeTwoDigits() + "    : testing length on '<17,53,29,31,5,7,11,47,19,71>' [ten-Tuple]:" );
+         System.out.print  ( "  Expecting: 'true': " );
+         Tuple t5 = new Tuple(new int[] { 17, 53, 29, 31, 5, 7, 11, 47, 19, 71 });
+         displaySuccessIfTrue( 10 == t5.length() );
       } catch( Exception e ) {
          e.printStackTrace();
          displayFailure();
