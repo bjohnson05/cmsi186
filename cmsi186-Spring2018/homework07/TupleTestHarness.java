@@ -175,6 +175,26 @@ public class TupleTestHarness {
          e.printStackTrace();
          displayFailure();
       }
+
+      try {
+         Tuple t4 = new Tuple(new int[] { 13, 11, 23, 19, 5, 29 });
+         System.out.println( "Test " + makeTwoDigits() + "    : testing constructing '<13,11,23,19,5,29>' [six-Tuple]:" );
+         System.out.print  ( "  Expecting: 'true': " );
+         displaySuccessIfTrue( "<13,11,23,19,5,29>".equals(t4.toString() ));
+      } catch( Exception e ) {
+         e.printStackTrace();
+         displayFailure();
+      }
+
+      try {
+         Tuple t5 = new Tuple(new int[] { 17, 53, 29, 31, 5, 7, 11, 47, 19, 71 });
+         System.out.println( "Test " + makeTwoDigits() + "    : testing constructing '<17,53,29,31,5,7,11,47,19,71>' [ten-Tuple]:" );
+         System.out.print  ( "  Expecting: 'true': " );
+         displaySuccessIfTrue( "<17,53,29,31,5,7,11,47,19,71>".equals(t5.toString() ));
+      } catch( Exception e ) {
+         e.printStackTrace();
+         displayFailure();
+      }
    }
 
   /**
