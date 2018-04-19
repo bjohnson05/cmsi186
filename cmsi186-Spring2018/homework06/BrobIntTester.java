@@ -437,6 +437,18 @@ public class BrobIntTester {
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
 
+      try {
+         System.out.println( "\n    Test 037d: Checking compareTo() method on 1234.compareTo -999: "  );
+         System.out.println( "      expecting: positive value and got: " + (new BrobInt("1234").compareTo( new BrobInt( "-999" ) ) ) );
+      }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
+
+      try {
+         System.out.println( "\n    Test 037e: Checking compareTo() method on -999.compareTo G3: "  );
+         System.out.println( "      expecting: negative value and got: " + new BrobInt( "-999" ).compareTo( g3 ) );
+      }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
+
       System.out.println( "\n\n    TESTING SUBTRACTBYTE() METHOD:\n" +
                           "    ==============================" );
       System.out.println( "\n      Test 038: Subtracting g13 take away g11 [234567 - 10] using bytes: " );

@@ -37,13 +37,13 @@ public class BrobIntTemplate {
 
   /// Some constants for other intrinsic data types
   ///  these can help speed up the math if they fit into the proper memory space
-   public static final BrobInt MAX_INT  = new BrobInt( new Integer.valueOf( Integer.MAX_VALUE ).toString() );
-   public static final BrobInt MIN_INT  = new BrobInt( new Integer.valueOf( Integer.MIN_VALUE ).toString() );
-   public static final BrobInt MAX_LONG = new BrobInt( new Long.valueOf( Long.MAX_VALUE ).toString() );
-   public static final BrobInt MIN_LONG = new BrobInt( new Long.valueOf( Long.MIN_VALUE ).toString() );
+   public static final BrobInt MAX_INT  = new BrobInt( Integer.valueOf( Integer.MAX_VALUE ).toString() );
+   public static final BrobInt MIN_INT  = new BrobInt( Integer.valueOf( Integer.MIN_VALUE ).toString() );
+   public static final BrobInt MAX_LONG = new BrobInt( Long.valueOf( Long.MAX_VALUE ).toString() );
+   public static final BrobInt MIN_LONG = new BrobInt( Long.valueOf( Long.MIN_VALUE ).toString() );
 
   /// These are the internal fields
-   private String internalValue = "";        // internal String representation of this BrobInt
+   public  String internalValue = "";        // internal String representation of this BrobInt
    private byte   sign          = 0;         // "0" is positive, "1" is negative
    private String reversed      = "";        // the backwards version of the internal String representation
    private byte[] byteVersion   = null;      // byte array for storing the string values; uses the reversed string
@@ -125,7 +125,7 @@ public class BrobIntTemplate {
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    *  Method to multiply the value of a BrobIntk passed as argument to this BrobInt
-   *  @param  gint         BrobInt to multiply by this
+   *  @param  gint         BrobInt to multiply this by
    *  @return BrobInt that is the product of the value of this BrobInt and the one passed in
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public BrobInt multiply( BrobInt gint ) {
@@ -159,17 +159,31 @@ public class BrobIntTemplate {
    *        character by character comparison to determine
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public int compareTo( BrobInt gint ) {
+
+     // handle the signs here
+      if( 1 == sign && 0 == gint.sign ) {
+         return -1;
+      } else if( 0 == sign && 1 == gint.sign ) {
+         return 1;
+      }
+
+     // the signs are the same at this point
+     // check the length and return the appropriate value
+     //   1 means this is longer than gint, hence larger
+     //  -1 means gint is longer than this, hence larger
       if( internalValue.length() > gint.internalValue.length() ) {
          return 1;
       } else if( internalValue.length() < gint.internalValue.length() ) {
          return (-1);
+
+     // otherwise, they are the same length, so compare absolute values
       } else {
          for( int i = 0; i < internalValue.length(); i++ ) {
-            Character a = new Character( internalValue.charAt(i) );
-            Character b = new Character( gint.internalValue.charAt(i) );
-            if( new Character(a).compareTo( new Character(b) ) > 0 ) {
+            Character a = Character.valueOf( internalValue.charAt(i) );
+            Character b = Character.valueOf( gint.internalValue.charAt(i) );
+            if( Character.valueOf(a).compareTo( Character.valueOf(b) ) > 0 ) {
                return 1;
-            } else if( new Character(a).compareTo( new Character(b) ) < 0 ) {
+            } else if( Character.valueOf(a).compareTo( Character.valueOf(b) ) < 0 ) {
                return (-1);
             }
          }
@@ -181,8 +195,8 @@ public class BrobIntTemplate {
    *  Method to check if a BrobInt passed as argument is equal to this BrobInt
    *  @param  gint     BrobInt to compare to this
    *  @return boolean  that is true if they are equal and false otherwise
-   *  NOTE: this method performs a similar lexicographical comparison as the "compareTo()" method above
-   *        also using the java String "equals()" method -- THAT was easy, too..........
+   *  NOTE: this method performs a similar lexicographical comparison as the "compareTo()" using the
+   *        java String "equals()" method -- THAT was easy..........
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public boolean equals( BrobInt gint ) {
       return (internalValue.equals( gint.toString() ));
@@ -190,13 +204,13 @@ public class BrobIntTemplate {
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    *  Method to return a BrobInt given a long value passed as argument
-   *  @param  value         long type number to make into a BrobInt
+   *  @param  value    long type number to make into a BrobInt
    *  @return BrobInt  which is the BrobInt representation of the long
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public static BrobInt valueOf( long value ) throws NumberFormatException {
       BrobInt gi = null;
       try {
-         gi = new BrobInt( new Long.valueOf( value ).toString() );
+         gi = new BrobInt( Long.valueOf( value ).toString() );
       }
       catch( NumberFormatException nfe ) {
          System.out.println( "\n  Sorry, the value must be numeric of type long." );
@@ -218,7 +232,13 @@ public class BrobIntTemplate {
    }
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   *  Method to display an Array representation of this BrobInt as its bytes
+   *  Helper method to display an Array representation of this BrobInt as its bytes
+   *  @param  d  byte array to represent
+   *  @see https://docs.oracle.com/javase/9/docs/api/java/util/Arrays.html
+   *  NOTE: the java.utils.Arrays class contains a toString() method which is overridden to take quite a
+   *        few different array data types as arguments.  To use this with your code, simply change the
+   *        data type for the argument to match the data type of the array you want represented.  For
+   *        example, change "byte[]" to "int[]" to make this method hand int arrays.
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public void toArray( byte[] d ) {
       System.out.println( Arrays.toString( d ) );
@@ -227,7 +247,7 @@ public class BrobIntTemplate {
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    *  the main method redirects the user to the test class
    *  @param  args  String array which contains command line arguments
-   *  note:  we don't really care about these
+   *  NOTE:  we don't really care about these, since we test the BrobInt class with the BrobIntTester
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public static void main( String[] args ) {
       System.out.println( "\n  Hello, world, from the BrobInt program!!\n" );
