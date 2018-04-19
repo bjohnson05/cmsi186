@@ -154,11 +154,27 @@ public class BrobIntTemplate {
    *  Method to compare a BrobInt passed as argument to this BrobInt
    *  @param  gint  BrobInt to add to this
    *  @return int   that is one of neg/0/pos if this BrobInt precedes/equals/follows the argument
-   *  NOTE: this method performs a lexicographical comparison using the java String "compareTo()" method
-   *        THAT was easy.....
+   *  NOTE: this method does not do a lexicographical comparison using the java String "compareTo()" method
+   *        It takes into account the length of the two numbers, and if that isn't enough it does a
+   *        character by character comparison to determine
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public int compareTo( BrobInt gint ) {
-      return (internalValue.compareTo( gint.toString() ));
+      if( internalValue.length() > gint.internalValue.length() ) {
+         return 1;
+      } else if( internalValue.length() < gint.internalValue.length() ) {
+         return (-1);
+      } else {
+         for( int i = 0; i < internalValue.length(); i++ ) {
+            Character a = new Character( internalValue.charAt(i) );
+            Character b = new Character( gint.internalValue.charAt(i) );
+            if( new Character(a).compareTo( new Character(b) ) > 0 ) {
+               return 1;
+            } else if( new Character(a).compareTo( new Character(b) ) < 0 ) {
+               return (-1);
+            }
+         }
+      }
+      return 0;
    }
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
