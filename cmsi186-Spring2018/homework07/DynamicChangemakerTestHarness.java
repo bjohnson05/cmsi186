@@ -196,6 +196,27 @@ public class DynamicChangemakerTestHarness {
          displayFailure();
       }
 
+      newDenominations  = new int[] { 1, 7, 9 };
+      System.out.println( "\n    Test" + makeTwoDigits() + ": testing optimal solution for 12 cents using " + Arrays.toString( newDenominations ) + ": " );
+      result = DynamicChangeMaker.makeChangeWithDynamicProgramming( newDenominations, 12 );
+      try {
+         System.out.print( "      expecting Tuple: <3,0,1>: " );
+         displaySuccessIfTrue( "<3,0,1>".equals( result.toString() ) );
+      } catch (Exception e) {
+         e.printStackTrace();
+         displayFailure();
+      }
+
+      newDenominations  = new int[] { 8, 13, 4, 9 };
+      System.out.println( "\n    Test" + makeTwoDigits() + ": testing for impossible solution for 14 cents using " + Arrays.toString( newDenominations ) + ": " );
+      result = DynamicChangeMaker.makeChangeWithDynamicProgramming( newDenominations, 14 );
+      try {
+         System.out.print( "      expecting Tuple: Impossible tuple: " );
+         displaySuccessIfTrue( "Impossible tuple".equals( result.toString() ) );
+      } catch (Exception e) {
+         e.printStackTrace();
+         displayFailure();
+      }
    }
 
    public static void test_Euros() {
@@ -331,7 +352,7 @@ public class DynamicChangemakerTestHarness {
    * method to test a bogus set of denominations which includes a negative amount
    */
    public static void test_BogusDenomintaions1() {
-      System.out.println( "\n\n  TESTING TO RANDOM TUPLE GENERATION FOR THREE BOGUS DENOMINATION SETS" );
+      System.out.println( "\n\n  TESTING OF RANDOM TUPLE GENERATION FOR THREE BOGUS DENOMINATION SETS" );
       System.out.println( "  ====================================================================" );
 
       int[] badDenominations = new int[] { 1, 2, 3, 4, -5, 6, 7 };
