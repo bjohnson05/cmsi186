@@ -27,6 +27,8 @@
  *                                    as well as a couple of extra tests for bogus denomination values to
  *                                    check throwing exceptions and to verify that *something* returns an
  *                                    "Impossible tuple" result.  Ready to commit the final version.
+ *  1.3.0  2018-04-25  B.J. Johnson  Added a few more test cases, checking for invalid inputs and for
+ *                                    a couple more "odd" demonimations.  Corrected incorrect spellings
  *
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 import java.util.Arrays;
@@ -63,11 +65,11 @@ public class DynamicChangemakerTestHarness {
 
       System.out.println( "creating random tuple: " + randomTuple( 7, true ) );
       System.out.println( "creating random tuple: " + randomTuple( 7, false ) );
-      test_BogusDenomintaions1();
-      test_BogusDenomintaions2();
-      test_BogusDenomintaions3();
+      test_BogusDenominations1();
+      test_BogusDenominations2();
+      test_BogusDenominations3();
       // test_BogusDenomintaions4();   this was removed permanently
-      test_BogusDenomintaions5();
+      test_BogusDenominations5();
 
       System.out.println( "\n\nResults:\n      " + successes + "/" + attempts + " tests passed." );
    }
@@ -384,7 +386,7 @@ public class DynamicChangemakerTestHarness {
   /**
    * method to test a bogus set of denominations which includes a negative amount
    */
-   public static void test_BogusDenomintaions1() {
+   public static void test_BogusDenominations1() {
       System.out.println( "\n\n  TESTING OF TUPLE GENERATION FOR THREE BOGUS DENOMINATION SETS" );
       System.out.println( "  =============================================================" );
 
@@ -407,7 +409,7 @@ public class DynamicChangemakerTestHarness {
   /**
    * method to test a bogus set of denominations which includes a zero
    */
-   public static void test_BogusDenomintaions2() {
+   public static void test_BogusDenominations2() {
       int[] badDenominations = new int[] { 2, 3, 5, 8, 13, 21, 0, 34 };
       System.out.println( "\n    Test " + makeTwoDigits() + ": testing second list of bogus denominations, containing a zero......" );
       System.out.println( "          expecting: BAD DATA and a message: " );
@@ -427,7 +429,7 @@ public class DynamicChangemakerTestHarness {
   /**
    * method to test a bogus set of denominations which includes repeats
    */
-   public static void test_BogusDenomintaions3() {
+   public static void test_BogusDenominations3() {
       int[] badDenominations = new int[] { 2, 3, 2, 3 };
       System.out.println( "\n    Test " + makeTwoDigits() + ": testing third list of bogus denominations, containing repeats......" );
       System.out.println( "          expecting: BAD DATA and a message: " );
@@ -447,7 +449,7 @@ public class DynamicChangemakerTestHarness {
   /**
    * method to test a bogus set of denominations which includes repeats
    */
-   public static void test_BogusDenomintaions5() {
+   public static void test_BogusDenominations5() {
       int[] badDenominations = new int[] { 2, 3, 17, 23 };
       System.out.println( "\n    Test " + makeTwoDigits() + ": testing bogus negative amount......" );
       System.out.println( "          expecting: BAD DATA and a message: " );
