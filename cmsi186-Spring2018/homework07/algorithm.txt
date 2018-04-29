@@ -10,8 +10,9 @@
            // Otherwise, this is NOT column zero
             } else {
 
-              // if we can't take one of the denominations out of the value of "j"
-              //  impossible, at least temporarily
+              // check to see if we CAN take ONE thing out of the current value;
+              //  if we CAN'T take one of the denominations out of the value of "j"
+              //   impossible, at least temporarily
                if( some_check_to_see_if_we_can_take_ONE_thing_out_of_the_current_value ) {
 
                  // look backward to see if there is a valid/impossible solution
