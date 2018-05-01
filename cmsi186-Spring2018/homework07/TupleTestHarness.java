@@ -21,6 +21,7 @@
  *                                    during test runs; added tests for the "isImpossible" method and the
  *                                    "hashCode" method
  *  1.2.0  2018-04-16  B.J. Johnson  Added a few more tests to verify six- and ten-tuples
+ *  1.2.1  2018-04-18  B.J. Johnson  Added param description for main for javadocs
  *
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -32,6 +33,7 @@ public class TupleTestHarness {
 
   /**
    *  the main method which calls all the test methods
+   *  @param  args  String array containing the string values of the command line arguments
    */
    public static void main(String[] args) {
 

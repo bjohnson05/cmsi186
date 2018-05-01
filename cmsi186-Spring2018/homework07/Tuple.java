@@ -82,7 +82,7 @@ public class Tuple {
    * @return whether the tuple is imposible
    */
    public boolean isImpossible() {
-      return this == IMPOSSIBLE;
+      return this.equals( IMPOSSIBLE );
    }
 
   /**
@@ -162,8 +162,7 @@ public class Tuple {
    */
    @Override
    public boolean equals( Object t ) {
-      if( (t == null) || !(t instanceof Tuple) ||
-          (length() != ((Tuple)t).length())       ) {
+      if( (t == null) || (!(t instanceof Tuple)) || (length() != ((Tuple)t).length())       ) {
          return false;
       }
 
