@@ -63,8 +63,9 @@ public class DynamicChangemakerTestHarness {
       test_Euros();            // 1,2,5,10,20,50
       test_SwissFrancs();      // 5,10,20,50 (NO 1 CENT COIN!)
 
-      System.out.println( "creating random tuple: " + randomTuple( 7, true ) );
-      System.out.println( "creating random tuple: " + randomTuple( 7, false ) );
+      System.out.println( "      creating random tuple: " + randomTuple( 7, true ) );
+      System.out.println( "      creating random tuple: " + randomTuple( 11, false ) );
+
       test_BogusDenominations1();
       test_BogusDenominations2();
       test_BogusDenominations3();
@@ -169,7 +170,7 @@ public class DynamicChangemakerTestHarness {
       System.out.println( "\n\n  TESTING TO FIND OPTIMAL SOLUTION USING NON-STANDARD DENOMINATIONS" );
       System.out.println( "  =================================================================" );
       int[] newDenominations  = new int[] { 2, 3 };
-      System.out.println( "\n    Test" + makeTwoDigits() + ": testing optimal solution for 6 cents using " + Arrays.toString( newDenominations ) + ": " );
+      System.out.println( "\n    Test" + makeTwoDigits() + ": testing optimal solution for 5 cents using " + Arrays.toString( newDenominations ) + ": " );
       result = DynamicChangeMaker.makeChangeWithDynamicProgramming( newDenominations, 5 );
       try {
          System.out.print( "      expecting Tuple: <1,1>: " );
@@ -372,6 +373,12 @@ public class DynamicChangemakerTestHarness {
    public static Tuple randomTuple( int elementCount, boolean oneAllowed ) {
       int start = oneAllowed ? 2 : 1;
       int[] myDenoms = new int[ elementCount ];
+
+      System.out.println( "\n\n  TESTING RANDOM TUPLE GENERATION" );
+      System.out.println( "  ===============================" );
+
+      System.out.println( "\n    Test" + makeTwoDigits() + ": random Tuple generation with value 1 " + (oneAllowed ? "" : "not ") + "allowed: ");
+
       for( int i = start; i <= MAX_DENOM_VALUE; i++ ) {
          list.add( new Integer( i ) );
       }
@@ -379,8 +386,14 @@ public class DynamicChangemakerTestHarness {
       for( int i = 0; i < myDenoms.length; i++ ) {
          myDenoms[i] = list.get( i );
       }
-      Tuple rwoDenominations = new Tuple( myDenoms );
-      return rwoDenominations;
+      try {
+         System.out.print( "      expecting success : " );
+         displaySuccessIfTrue( true );
+      } catch (Exception e) {
+         e.printStackTrace();
+         displayFailure();
+      }
+      return new Tuple( myDenoms );
    }
 
   /**
@@ -451,7 +464,7 @@ public class DynamicChangemakerTestHarness {
    */
    public static void test_BogusDenominations5() {
       int[] badDenominations = new int[] { 2, 3, 17, 23 };
-      System.out.println( "\n    Test " + makeTwoDigits() + ": testing bogus negative amount......" );
+      System.out.println( "\n    Test " + makeTwoDigits() + ": testing bogus negative target amount......" );
       System.out.println( "          expecting: BAD DATA and a message: " );
       System.out.print  ( "            and got: " );
       try {
