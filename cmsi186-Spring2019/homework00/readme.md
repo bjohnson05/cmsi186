@@ -1,6 +1,5 @@
 # CMSI 186: Homework Assignment #0
 ## Stuff to Get You Started [Setting Up Your Environment]
-### Assignment Due: Tuesday, January 16, 2018 [2018-01-16]
 
 This is homework number "zero", because as we all know, good computer scientists ALWAYS start counting at zero.
 The intent of this homework is to verify that you have an understanding of the following topics:
