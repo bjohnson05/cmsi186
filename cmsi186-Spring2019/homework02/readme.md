@@ -71,6 +71,7 @@
 1.  A four-sided die would be a tetrahedron [also known as a pyramid]. You can use that, but since it will never end up on its point, it is a bit hard to define what it's value would be when rolled, without coming up with a convention to unequivocably pick a side to which you can refer as its "value". If you can do that, or you can make a case in which it doesn't matter, go for it.
 1.  A five-sided die is possible, if you take a tetrahedron and chop off the top to make a frustum. This would look like a pyramid with the top flattened out, or you could have a prism with the top and bottom [or ends] being solid triangular shapes. This is probably the smallest usable number of sides in real life.
 1.  All that being said, this IS a sort of "thought problem" so if you can figure out a way to use even a one-sided die [pretty boring rolling that one], feel free!
+1.You might be tempted to say You know, I'm only getting ONE value no matter what, so it really doesn't matter HOW many sides the die has as long as I have a random value when I roll it. However, by convention, each side of a die has a different number, with the default being that the top face on the die is the value of the roll. This also means if I have a six-sided die, there's no way I can get an 11 on that die unless something is **drastically** hinky…
 1.  Note that you should only allow the user to quit the game by using the QUIT option from the menu. That means you will implement a "good endless loop" as discussed in class.
 
 ### Submission Guidelines:
