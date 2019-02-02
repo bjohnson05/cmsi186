@@ -31,8 +31,8 @@ Note that if you are not familiar with the command line, console, or terminal wi
 1. $ git config --global user.email "[your email address]" to set your user e-mail address to what you want to see in your commits.<br />Use your GitHub account e-mail.  Use the quotes, but NOT the brackets.
 
 ## Creating a Repository
-1. *git init [repo-name]* to create a new local repository with the specified name **on your local machine in your current working directory**<br />BE SURE you are in the directory [or folder] where you want this repo to be located on your local machine
-2. *git clone [URL]* to download a copy of the repository with its entire version history **onto your local machine in your current working directory**<br />BE SURE you are in the directory [or folder] where you want this data to go
+1. *$ git init [repo-name]* to create a new local repository with the specified name **on your local machine in your current working directory**<br />BE SURE you are in the directory [or folder] where you want this repo to be located on your local machine
+2. *$ git clone [URL]* to download a copy of the repository with its entire version history **onto your local machine in your current working directory**<br />BE SURE you are in the directory [or folder] where you want this data to go
 
 ## Synchronizing Changes
 * To upload new versions of your code to GitHub, you will "push" the changes.
