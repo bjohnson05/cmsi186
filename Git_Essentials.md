@@ -28,17 +28,18 @@ Note that if you are not familiar with the command line, console, or terminal wi
 
 ## Configuring a Repository
 1. *$ git config --global user.name "[git user name]"* to set your user name to what you want to see in your commits.<br />Use your GitHub user name.  Use the quotes, but NOT the brackets.
-1. $ git config --global user.email "[your email address]" to set your user e-mail address to what you want to see in your commits.<br />Use your GitHub account e-mail.  Use the quotes, but NOT the brackets.
+1. *$ git config --global user.email "[your email address]"* to set your user e-mail address to what you want to see in your commits.<br />Use your GitHub account e-mail.  Use the quotes, but NOT the brackets.
 
 ## Creating a Repository
 1. *$ git init [repo-name]* to create a new local repository with the specified name **on your local machine in your current working directory**<br />BE SURE you are in the directory [or folder] where you want this repo to be located on your local machine
 2. *$ git clone [URL]* to download a copy of the repository with its entire version history **onto your local machine in your current working directory**<br />BE SURE you are in the directory [or folder] where you want this data to go
 
 ## Synchronizing Changes
-* To upload new versions of your code to GitHub, you will "push" the changes.
-* To download new versions of your code to your local computer, you will "pull" the data.
-* To "lock in" the changes, you will "commit" them.  You should always add a "commit message".
-* GitHub maintains the "old" versions of your files so when you commit a change, the latest file is the one you will see.  The older versions are "behind the scenes" but will be saved and are accessible if you want/need them.
+* Notes on what follows:
+  * To upload new versions of your code to GitHub, you will "push" the changes.
+  * To download new versions of your code to your local computer, you will "pull" the data.
+  * To "lock in" the changes, you will "commit" them.  You should always add a "commit message".
+  * GitHub maintains the "old" versions of your files so when you commit a change, the latest file is the one you will see.  The older versions are "behind the scenes" but will be saved and are accessible if you want/need them.
 
 1. *$ git status* shows any and all new/modified files that need to be committed.
 1. *$ git add [file]* adds a new file to the list of files whose changes will be tracked by GitHub.  Note that this adds the file **to the list being tracked**, NOT necessarily to this particular commit.
