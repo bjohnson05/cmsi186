@@ -50,7 +50,7 @@ public class ClockEmpty {
    *  @return  double-precision value of the argument
    *  @throws  NumberFormatException
    */
-   public double validateAngleArg( String argValue ) throws NumberFormatException {
+   public static double validateAngleArg( String argValue ) throws NumberFormatException {
       return 0.0;
    }
 
@@ -65,7 +65,7 @@ public class ClockEmpty {
    *  note: remember that the time slice, if it is small will cause the simulation
    *         to take a VERY LONG TIME to complete!
    */
-   public double validateTimeSliceArg( String argValue ) {
+   public static double validateTimeSliceArg( String argValue ) {
       return 0.0;
    }
 
