@@ -22,9 +22,9 @@ public class ClockSolverEmpty {
   /**
    *  Class field definintions go here
    */
-   private final double MAX_TIME_SLICE_IN_SECONDS  = 1800.00;
-   private final double DEFAULT_TIME_SLICE_SECONDS = 60.0;
-   private final double EPSILON_VALUE              = 0.1;      // small value for double-precision comparisons
+   private static final double MAX_TIME_SLICE_IN_SECONDS  = 1800.00;
+   private static final double DEFAULT_TIME_SLICE_SECONDS = 60.0;
+   private static final double EPSILON_VALUE              = 0.1;      // small value for double-precision comparisons
 
   /**
    *  Constructor
