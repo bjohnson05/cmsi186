@@ -1,9 +1,9 @@
 
 # CMSI 186: Homework Assignment #5
 ## Problems About Riemann Ingegration [Randomized Estimations]
-### Assignment Due: Monday, 2019-04-01 for section 05
-### Tuesday, 2019-04-02 for section 03
+### Assignment Due:<br />Monday, 2019-04-01 for section 05<br />Tuesday, 2019-04-02 for section 03
 
+## For this homework, accomplish the following activities:
 This assignment concerns a method of using <strong>randomized estimation</strong> to determine the area under a curve. For this assignment you will make programs for integrating polynomials, as discussed in class.
 
 You will make the program <strong><code>Riemann.java</code></strong>, which computes definite integrals using Riemann integration. Your program must be able to handle polynomials of arbitary degree. If the program is invoked incorrectly, it should output a clear, appropriate error message along with a message to tell the user the proper way to run the program.
