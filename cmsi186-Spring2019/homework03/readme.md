@@ -1,6 +1,6 @@
 # CMSI 186: Homework Assignment #3
 ## Problems About Clocks and Time [Discrete Simulations]
-### Assignment Due: Wednesday, 2019-02-27 for section 05; Thursday, 2019-02-28 for section 03
+### Assignment Due: Wednesday,<br />2019-02-27 for section 05;<br />Thursday, 2019-02-28 for section 03
 **This is part one of a two-part assignment.** In this first part, you will program a discrete simulation of an analog clock in order to answer some questions about its behavior.  For this homework, accomplish the following activities to make a Java program, **_ClockSolver.java_**, that determines all times during a twelve-hour day at which the two hands of a clock form a given angle.  You will run your program in the following way:
 
    **_java ClockSolver &lt;angle-value&gt; [time-slice]_**
