@@ -19,8 +19,8 @@ NOTE: there are NO OPTIONAL ARGUMENTS for this assignment.  All input to the pro
 The following additional conditions apply:
 
 1. You must make program Riemann.Java, which can integrate various functions that are built in to your program. Here are some examples of how it might be invoked:<br />
-<code>java Riemann sin -0.27 +3.55</code> [integrates the sin function from x = -0.27 to x = +3.55]<br />
 <code>java Riemann poly 1.0 -2.1 3.2 -10.0 +5.0</code> [integrates the polynomial 1.0 - 2.1x + 3.2x2 from x = -10. to x = 5.0]<br />
+<code>java Riemann sin -0.27 +3.55</code> [integrates the sin function from x = -0.27 to x = +3.55]<br />
 <code>java Riemann log 1.1 2.3</code> [integrates the (natural) log function from x = 1.1 to x = 2.3]<br />
 <code>java Riemann exp 2.0 3.5</code> [integrates the function ex from x = 2.0 to x = 3.5]<br />
 <code>java Riemann sqrt 1.0 2.0</code> [integrates the function sqrt(x) from x = -1.0 to x = 2.0]<br />
