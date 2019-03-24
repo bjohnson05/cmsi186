@@ -46,5 +46,6 @@ The following additional conditions apply:
 1. You MUST at a minimum be able to do the polynomial and sin integrations. Start with degree two, then use that as the starting point to get an arbitrary degree.
 1. Once polynomials are working, add on the sin trigonometric function.  Then add on some of the others.  Don't worry, for these I won't go crazy with composite functions, just the regular ones will do. At a minimum, you MUST get integration of the sin function to work.
 1. Anything else you are able to complete will provide you with one point of extra credit for this assignment. Yes, that means it is possible to get higher than 100% on this project.
+
 **Submission Guidelines**: Make a sub-directory in your repository as mentioned above, called homework05 and commit your source code into it. <strong>DON'T FORGET TO ADD A COMMIT COMMENT!</strong>
 
