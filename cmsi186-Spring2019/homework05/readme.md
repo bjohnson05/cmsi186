@@ -14,8 +14,6 @@ java Riemann args[0] args[1] args[2] … args[k] &lt;lowerBound&gt; &lt;upperBou
 
 where args[0] is the name of a function type; args[1] … args[k] specify the coefficients of the x0 … xk terms of the polynomial; &lt;lowerBound&gt; and &lt;upperBound&gt; specify the lower and upper bounds of x, i.e., the range within which the integral should be evaluated; and finally &lt;percentage&gt; indicates when the program should halt – specifically, the program should halt when two successive approximations are within percent <q><code>percentage</code></q> of one another.
 
-NOTE: there are NO OPTIONAL ARGUMENTS for this assignment.  All input to the program <strong>MUST COME FROM THE COMMAND LINE!</strong>
-
 The following additional conditions apply:
 
 1. You must make program Riemann.Java, which can integrate various functions that are built in to your program. Here are some examples of how it might be invoked:<br />
