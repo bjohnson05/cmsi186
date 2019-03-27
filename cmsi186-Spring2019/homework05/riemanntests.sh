@@ -4,8 +4,6 @@ rm testresults.txt
 # purpose: provide a unified test sequence for the Riemann Integration Project
 # @see http://bjohnson.lmu.build/cmsi186web/homework05.html for details
 # ============================================================================
-echo off
-@del testresults.txt
 echo .
 echo =====================================================
 echo Testing the Riemann Ingetration Project Homework # 05
