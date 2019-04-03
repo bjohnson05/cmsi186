@@ -309,12 +309,12 @@ echo ===========================================================================
 
 @echo .
 @echo Testing valid function name 'cos' with args -17.0 3.0 -11.0 11.0 and 1e-7%%
-@echo ...should produce a result close to '0.1834'
+@echo ...should produce a result close to '-0.1834'
 echo .                                                                              >> testresults.txt
 echo .                                                                              >> testresults.txt
 echo ============================================================================   >> testresults.txt
 echo Testing valid function name 'cos' with args -17.0 3.0 -11.0 11.0 and 1e-7%%    >> testresults.txt
-echo ...should produce a result close to '0.1834'                                   >> testresults.txt
+echo ...should produce a result close to '-0.1834'                                  >> testresults.txt
 echo ============================================================================   >> testresults.txt
 @java Riemann cos -17.0 3.0 -11.0 11.0 1e-7%%                                       >> testresults.txt
 
