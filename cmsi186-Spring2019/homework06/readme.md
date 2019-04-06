@@ -54,5 +54,5 @@ You will develop public class <strong>BrobdingnagianInt</strong>, whose objects 
     * Commit early and commit often
     * Test, test, and test again
     * Start assignments early, using an iterative approach to your development
-1. Here are the links I showed in class about different algorithms.  If you do any searching for things on your own, feel free to share them with me and with each other, <strong>AS LONG AS THEY ARE ALGORITHMIC DESCRIPTIONS AND NOT ACTUAL CODE</strong>.
+1. If you do any searching for things on your own, feel free to share them with me and with each other, <strong>AS LONG AS THEY ARE ALGORITHMIC DESCRIPTIONS AND NOT YOUR ACTUAL CODE</strong>.
 1. Submission Guidelines: Make a sub-directory in your repository as mentioned above, called homework06 and commit your source code into it. DON'T FORGET TO ADD A COMMIT COMMENT!
