@@ -20,6 +20,9 @@
  *
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 import java.util.Arrays;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
 
 public class BrobIntTemplate {
 
@@ -44,9 +47,10 @@ public class BrobIntTemplate {
 
   /// These are the internal fields
    public  String internalValue = "";        // internal String representation of this BrobInt
-   private byte   sign          = 0;         // "0" is positive, "1" is negative
+   public  byte   sign          = 0;         // "0" is positive, "1" is negative
    private String reversed      = "";        // the backwards version of the internal String representation
-//   private byte[] byteVersion   = null;      // byte array for storing the string values; uses the reversed string
+
+   private static BufferedReader input = new BufferedReader( new InputStreamReader( System.in ) );
 
   /**
    *  Constructor takes a string and assigns it to the internal storage, checks for a sign character
@@ -65,7 +69,7 @@ public class BrobIntTemplate {
    *  note that there is no return false, because of throwing the exception
    *  note also that this must check for the '+' and '-' sign digits
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-   public boolean validateDigits() {
+   public boolean validateDigits() throws IllegalArgumentException {
       throw new UnsupportedOperationException( "\n         Sorry, that operation is not yet implemented." );
    }
 
@@ -205,18 +209,69 @@ public class BrobIntTemplate {
    }
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   *  Helper method to display an Array representation of this BrobInt as its bytes
-   *  @param  d  byte array to represent
-   *  @see https://docs.oracle.com/javase/9/docs/api/java/util/Arrays.html
-   *  NOTE: the java.utils.Arrays class contains a toString() method which is overridden to take quite a
-   *        few different array data types as arguments.  To use this with your code, simply change the
-   *        data type for the argument to match the data type of the array you want represented.  For
-   *        example, change "byte[]" to "int[]" to make this method hand int arrays.
+   *  Method to remove leading zeros from a BrobInt passed as argument
+   *  @param  gint     BrobInt to remove zeros from
+   *  @return BrobInt that is the argument BrobInt with leading zeros removed
+   *  Note that the sign is preserved if it exists
+   *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+   public BrobInt removeLeadingZeros( BrobInt gint ) {
+      Character sign = null;
+      String returnString = gint.toString();
+      int index = 0;
+      if( allZeroDetect( gint ) ) {
+         return gint;
+      }
+      if( ('-' == returnString.charAt( index )) || ('+' == returnString.charAt( index )) ) {
+         sign = returnString.charAt( index );
+         index++;
+      }
+      if( returnString.charAt( index ) != '0' ) {
+         return gint;
+      }
+      while( returnString.charAt( index ) == '0' ) {
+         index++;
+      }
+      returnString = gint.toString().substring( index, gint.toString().length() );
+      if( sign != null ) {
+         returnString = sign.toString() + returnString;
+      }
+      return new BrobInt( returnString );
+   }
+  /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   *  Method to return a boolean if a BrobInt is all zeros
+   *  @param  gint     BrobInt to compare to this
+   *  @return boolean  that is true if the BrobInt passed is all zeros, false otherwise
+   *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+   public boolean allZeroDetect( BrobInt gint ) {
+      for( int i = 0; i < gint.toString().length(); i++ ) {
+         if( gint.toString().charAt(i) != '0' ) {
+            return false;
+         }
+      }
+      return true;
+   }
+  /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   *  Method to display an Array representation of this BrobInt as its bytes
+   *  @param   d  byte array from which to display the contents
+   *  NOTE: may be changed to int[] or some other type based on requirements in code above
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public void toArray( byte[] d ) {
-      System.out.println( Arrays.toString( d ) );
+      System.out.println( "Array contents: " + Arrays.toString( d ) );
    }
 
+  /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   *  Method to display a prompt for the user to press 'ENTER' and wait for her to do so
+   *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+   public void pressEnter() {
+      String inputLine = null;
+      try {
+         System.out.print( "      [Press 'ENTER' to continue]: >> " );
+         inputLine = input.readLine();
+      }
+      catch( IOException ioe ) {
+         System.out.println( "Caught IOException" );
+      }
+   }
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    *  the main method redirects the user to the test class
    *  @param  args  String array which contains command line arguments
