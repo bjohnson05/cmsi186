@@ -347,9 +347,9 @@ public class BrobIntTester {
 
       System.out.println( "\n\n    TESTING COMPARETO() METHOD:\n" +
                           "    ===========================\n" +
-                          "    NOTE: this.compareTo(that) returns: -1 if this.compareTo < that\n" +
-                          "                               returns: +1 if this.compareTo > that\n" +
-                          "                               returns:  0 if this.compareTo = that" );
+                          "    NOTE: this.compareTo(that) returns: -1 if this < that\n" +
+                          "                               returns: +1 if this > that\n" +
+                          "                               returns:  0 if this = that" );
       try {
          System.out.println( "\n    Test " + df.format( testNumber++ ) + ": Checking compareTo() method on g1.compareTo g2: "  );
          System.out.println( "      expecting: 0 and got: " + g1.compareTo( g2 ) );
@@ -407,6 +407,12 @@ public class BrobIntTester {
       try {
          System.out.println( "\n    Test " + df.format( testNumber++ ) + "e: Checking compareTo() method on -999.compareTo G3: "  );
          System.out.println( "      expecting: negative value and got: " + new BrobInt( "-999" ).compareTo( g3 ) );
+      }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
+
+      try {
+         System.out.println( "\n    Test " + df.format( testNumber++ ) + "f: Checking compareTo() method on 00234.compareTo 234: "  );
+         System.out.println( "      expecting: zero value and got: " + new BrobInt( "00234" ).compareTo( new BrobInt( "234" ) ) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
 

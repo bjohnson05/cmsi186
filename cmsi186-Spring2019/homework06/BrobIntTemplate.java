@@ -51,6 +51,8 @@ public class BrobIntTemplate {
    private String reversed      = "";        // the backwards version of the internal String representation
 
    private static BufferedReader input = new BufferedReader( new InputStreamReader( System.in ) );
+   private static final boolean DEBUG_ON = false;
+   private static final boolean INFO_ON  = false;
 
   /**
    *  Constructor takes a string and assigns it to the internal storage, checks for a sign character
@@ -138,7 +140,7 @@ public class BrobIntTemplate {
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    *  Method to compare a BrobInt passed as argument to this BrobInt
-   *  @param  bint  BrobInt to add to this
+   *  @param  bint  BrobInt to compare to this
    *  @return int   that is one of neg/0/pos if this BrobInt precedes/equals/follows the argument
    *  NOTE: this method does not do a lexicographical comparison using the java String "compareTo()" method
    *        It takes into account the length of the two numbers, and if that isn't enough it does a
@@ -154,19 +156,24 @@ public class BrobIntTemplate {
       }
 
      // the signs are the same at this point
+     // remove any leading zeros because we will compare lengths
+     // String me  = removeLeadingZeros( this ).toString();
+      String me  = removeLeadingZeros( new BrobInt( internalValue ) ).toString();
+      String arg = removeLeadingZeros( bint ).toString();
+
      // check the length and return the appropriate value
      //   1 means this is longer than bint, hence larger
      //  -1 means bint is longer than this, hence larger
-      if( internalValue.length() > bint.internalValue.length() ) {
+      if( me.length() > arg.length() ) {
          return 1;
-      } else if( internalValue.length() < bint.internalValue.length() ) {
+      } else if( me.length() < arg.length() ) {
          return (-1);
 
      // otherwise, they are the same length, so compare absolute values
       } else {
-         for( int i = 0; i < internalValue.length(); i++ ) {
-            Character a = Character.valueOf( internalValue.charAt(i) );
-            Character b = Character.valueOf( bint.internalValue.charAt(i) );
+         for( int i = 0; i < me.length(); i++ ) {
+            Character a = Character.valueOf( me.charAt(i) );
+            Character b = Character.valueOf( arg.charAt(i) );
             if( Character.valueOf(a).compareTo( Character.valueOf(b) ) > 0 ) {
                return 1;
             } else if( Character.valueOf(a).compareTo( Character.valueOf(b) ) < 0 ) {
@@ -181,8 +188,6 @@ public class BrobIntTemplate {
    *  Method to check if a BrobInt passed as argument is equal to this BrobInt
    *  @param  bint     BrobInt to compare to this
    *  @return boolean  that is true if they are equal and false otherwise
-   *  NOTE: this method performs a similar lexicographical comparison as the "compareTo()" using the
-   *        java String "equals()" method -- THAT was easy..........
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public boolean equals( BrobInt bint ) {
       return (internalValue.equals( bint.toString() ));
@@ -210,46 +215,51 @@ public class BrobIntTemplate {
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    *  Method to remove leading zeros from a BrobInt passed as argument
-   *  @param  gint     BrobInt to remove zeros from
+   *  @param  bint     BrobInt to remove zeros from
    *  @return BrobInt that is the argument BrobInt with leading zeros removed
    *  Note that the sign is preserved if it exists
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-   public BrobInt removeLeadingZeros( BrobInt gint ) {
+   public BrobInt removeLeadingZeros( BrobInt bint ) {
       Character sign = null;
-      String returnString = gint.toString();
+      String returnString = bint.toString();
       int index = 0;
-      if( allZeroDetect( gint ) ) {
-         return gint;
+
+      if( allZeroDetect( bint ) ) {
+         return bint;
       }
       if( ('-' == returnString.charAt( index )) || ('+' == returnString.charAt( index )) ) {
          sign = returnString.charAt( index );
          index++;
       }
       if( returnString.charAt( index ) != '0' ) {
-         return gint;
+         return bint;
       }
+
       while( returnString.charAt( index ) == '0' ) {
          index++;
       }
-      returnString = gint.toString().substring( index, gint.toString().length() );
+      returnString = bint.toString().substring( index, bint.toString().length() );
       if( sign != null ) {
          returnString = sign.toString() + returnString;
       }
       return new BrobInt( returnString );
+
    }
+
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    *  Method to return a boolean if a BrobInt is all zeros
-   *  @param  gint     BrobInt to compare to this
+   *  @param  bint     BrobInt to compare to this
    *  @return boolean  that is true if the BrobInt passed is all zeros, false otherwise
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-   public boolean allZeroDetect( BrobInt gint ) {
-      for( int i = 0; i < gint.toString().length(); i++ ) {
-         if( gint.toString().charAt(i) != '0' ) {
+   public boolean allZeroDetect( BrobInt bint ) {
+      for( int i = 0; i < bint.toString().length(); i++ ) {
+         if( bint.toString().charAt(i) != '0' ) {
             return false;
          }
       }
       return true;
    }
+
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    *  Method to display an Array representation of this BrobInt as its bytes
    *  @param   d  byte array from which to display the contents
@@ -271,7 +281,9 @@ public class BrobIntTemplate {
       catch( IOException ioe ) {
          System.out.println( "Caught IOException" );
       }
+
    }
+
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    *  the main method redirects the user to the test class
    *  @param  args  String array which contains command line arguments
@@ -282,5 +294,6 @@ public class BrobIntTemplate {
       System.out.println( "\n   You should run your tests from the BrobIntTester...\n" );
 
       System.exit( 0 );
+
    }
 }
