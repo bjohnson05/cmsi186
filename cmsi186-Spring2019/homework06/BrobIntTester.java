@@ -416,8 +416,8 @@ public class BrobIntTester {
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
 
-      System.out.println( "\n\n    TESTING SUBTRACTBYTE() METHOD:\n" +
-                          "    ==============================" );
+      System.out.println( "\n\n    TESTING SUBTRACT() METHOD:\n" +
+                          "    ==========================" );
       System.out.println( "\n    Test " + df.format( testNumber++ ) + ": Subtracting g13 take away g11 [234567 - 10] using bytes: " );
       try {
          System.out.println( "      expecting: 234557\n" +
@@ -547,6 +547,27 @@ public class BrobIntTester {
       try {
          System.out.println( "      expecting: 2101193\n" +
                              "        and got: " + g20.multiply( g19 ) );
+      }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
+
+      System.out.println( "\n    Test " + df.format( testNumber++ ) + ": Multiplying g04 by 3: " );
+      try {
+         System.out.println( "      expecting: 43238372915913199204527729450732254954851885232694621\n" +
+                             "        and got: " + g4.multiply( new BrobInt( "3" ) ) );
+      }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
+
+      System.out.println( "\n    Test " + df.format( testNumber++ ) + ": Multiplying 82832833 by 3: " );
+      try {
+         System.out.println( "      expecting: 248498499\n" +
+                             "        and got: " + new BrobInt("82832833").multiply( new BrobInt( "3" ) ) );
+      }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
+
+      System.out.println( "\n    Test " + df.format( testNumber++ ) + ": Multiplying 82832833 by 3 and adding 1: " );
+      try {
+         System.out.println( "      expecting: 248498500\n" +
+                             "        and got: " + new BrobInt("82832833").multiply( new BrobInt( "3" ) ).add( BrobInt.ONE ) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
 
