@@ -17,6 +17,10 @@
  *                                     validateDigits, two reversers, and valueOf methods; revamped equals
  *                                     and compareTo methods to use the Java String methods; ready to
  *                                     start work on subtractByte and subtractInt methods
+ *  1.2.0  2019-04-18  B.J. Johnson  Fixed bug in add() method that was causing errors in Collatz
+ *                                     sequence.  Added some tests into the main() method at the bottom
+ *                                     of the file to test construction.  Also added two tests there to
+ *                                     test multiplication by three and times-3-plus-1 operations
  *
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 import java.util.Arrays;
@@ -48,6 +52,7 @@ public class BrobIntTemplate {
   /// These are the internal fields
    public  String internalValue = "";        // internal String representation of this BrobInt
    public  byte   sign          = 0;         // "0" is positive, "1" is negative
+  /// You can use this or not, as you see fit.  The explanation was provided in class
    private String reversed      = "";        // the backwards version of the internal String representation
 
    private static BufferedReader input = new BufferedReader( new InputStreamReader( System.in ) );
@@ -78,6 +83,8 @@ public class BrobIntTemplate {
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    *  Method to reverse the value of this BrobInt
    *  @return BrobInt that is the reverse of the value of this BrobInt
+   *  NOTE: you can use this or not, as you see fit; explanation was given in class
+   *  @see StringBuffer API page for an easy way to do this
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public BrobInt reverser() {
       throw new UnsupportedOperationException( "\n         Sorry, that operation is not yet implemented." );
@@ -88,13 +95,15 @@ public class BrobIntTemplate {
    *  Note: static method
    *  @param  bint         BrobInt to reverse its value
    *  @return BrobInt that is the reverse of the value of the BrobInt passed as argument
+   *  NOTE: you can use this or not, as you see fit; explanation was given in class
+   *  @see StringBuffer API page for an easy way to do this
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public static BrobInt reverser( BrobInt bint ) {
       throw new UnsupportedOperationException( "\n         Sorry, that operation is not yet implemented." );
    }
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   *  Method to add the value of a BrobInt passed as argument to this BrobInt using byte array
+   *  Method to add the value of a BrobIntk passed as argument to this BrobInt
    *  @param  bint         BrobInt to add to this
    *  @return BrobInt that is the sum of the value of this BrobInt and the one passed in
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -103,7 +112,7 @@ public class BrobIntTemplate {
    }
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   *  Method to subtract the value of a BrobIntk passed as argument to this BrobInt using bytes
+   *  Method to subtract the value of a BrobIntk passed as argument to this BrobInt
    *  @param  bint         BrobInt to subtract from this
    *  @return BrobInt that is the difference of the value of this BrobInt and the one passed in
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -157,8 +166,8 @@ public class BrobIntTemplate {
 
      // the signs are the same at this point
      // remove any leading zeros because we will compare lengths
-     // String me  = removeLeadingZeros( this ).toString();
-      String me  = removeLeadingZeros( new BrobInt( internalValue ) ).toString();
+     // Note: uncomment the next line when you rename "BrobIntTemplate" back to "BrobInt"
+      String me  = removeLeadingZeros( this ).toString();
       String arg = removeLeadingZeros( bint ).toString();
 
      // check the length and return the appropriate value
@@ -292,7 +301,18 @@ public class BrobIntTemplate {
    public static void main( String[] args ) {
       System.out.println( "\n  Hello, world, from the BrobInt program!!\n" );
       System.out.println( "\n   You should run your tests from the BrobIntTester...\n" );
+      BrobInt b1 = null;;
+      try { System.out.println( "   Making a new BrobInt: " ); b1 = new BrobInt( "147258369789456123" ); }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
+      try { System.out.println( "   expecting: 147258369789456123\n     and got: " + b1.toString() ); }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
+      System.out.println( "\n    Multiplying 82832833 by 3: " );
+      try { System.out.println( "      expecting: 248498499\n        and got: " + new BrobInt("82832833").multiply( BrobInt.THREE ) ); }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
 
+      System.out.println( "\n    Multiplying 3 by 82832833 and adding 1: " );
+      try { System.out.println( "      expecting: 248498500\n        and got: " + BrobInt.THREE.multiply( new BrobInt( "82832833" ) ).add( BrobInt.ONE ) ); }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
       System.exit( 0 );
 
    }
