@@ -74,7 +74,7 @@ public class TupleTestHarness {
       if( testCount < 10 ) {
          return new String( "0" + testCount );
       } else {
-         return new Integer( testCount ).toString();
+         return Integer.valueOf( testCount ).toString();
       }
    }
 
