@@ -157,37 +157,38 @@ public class BrobIntTemplate {
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public int compareTo( BrobInt bint ) {
 
+     // remove any leading zeros because we will compare lengths
+      String me  = removeLeadingZeros( this ).toString();
+      String arg = removeLeadingZeros( bint ).toString();
+
      // handle the signs here
       if( 1 == sign && 0 == bint.sign ) {
          return -1;
       } else if( 0 == sign && 1 == bint.sign ) {
          return 1;
+      } else if( 0 == sign && 0 == bint.sign ) {
+        // the signs are the same at this point ~ both positive
+        // check the length and return the appropriate value
+        //   1 means this is longer than bint, hence larger positive
+        //  -1 means bint is longer than this, hence larger positive
+         if( me.length() != arg.length() ) {
+            return (me.length() > arg.length()) ? 1 : -1;
+         }
+      } else {
+        // the signs are the same at this point ~ both negative
+         if( me.length() != arg.length() ) {
+            return (me.length() > arg.length()) ? -1 : 1;
+         }
       }
 
-     // the signs are the same at this point
-     // remove any leading zeros because we will compare lengths
-     // Note: uncomment the next line when you rename "BrobIntTemplate" back to "BrobInt"
-      String me  = removeLeadingZeros( this ).toString();
-      String arg = removeLeadingZeros( bint ).toString();
-
-     // check the length and return the appropriate value
-     //   1 means this is longer than bint, hence larger
-     //  -1 means bint is longer than this, hence larger
-      if( me.length() > arg.length() ) {
-         return 1;
-      } else if( me.length() < arg.length() ) {
-         return (-1);
-
      // otherwise, they are the same length, so compare absolute values
-      } else {
-         for( int i = 0; i < me.length(); i++ ) {
-            Character a = Character.valueOf( me.charAt(i) );
-            Character b = Character.valueOf( arg.charAt(i) );
-            if( Character.valueOf(a).compareTo( Character.valueOf(b) ) > 0 ) {
-               return 1;
-            } else if( Character.valueOf(a).compareTo( Character.valueOf(b) ) < 0 ) {
-               return (-1);
-            }
+      for( int i = 0; i < me.length(); i++ ) {
+         Character a = Character.valueOf( me.charAt(i) );
+         Character b = Character.valueOf( arg.charAt(i) );
+         if( Character.valueOf(a).compareTo( Character.valueOf(b) ) > 0 ) {
+            return 1;
+         } else if( Character.valueOf(a).compareTo( Character.valueOf(b) ) < 0 ) {
+            return (-1);
          }
       }
       return 0;
@@ -199,7 +200,7 @@ public class BrobIntTemplate {
    *  @return boolean  that is true if they are equal and false otherwise
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public boolean equals( BrobInt bint ) {
-      return (internalValue.equals( bint.toString() ));
+      return ( (sign == bint.sign) && (this.toString().equals( bint.toString() )) );
    }
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -301,6 +302,7 @@ public class BrobIntTemplate {
    public static void main( String[] args ) {
       System.out.println( "\n  Hello, world, from the BrobInt program!!\n" );
       System.out.println( "\n   You should run your tests from the BrobIntTester...\n" );
+
       BrobInt b1 = null;;
       try { System.out.println( "   Making a new BrobInt: " ); b1 = new BrobInt( "147258369789456123" ); }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
