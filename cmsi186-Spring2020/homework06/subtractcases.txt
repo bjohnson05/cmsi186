@@ -1,0 +1,13 @@
+
+
+     // set up for subtraction sign handling to decide what to do based on the following cases:
+     //    1. no signs at all, this item larger than argument:        simple subtraction a - b
+     //    2. both signs positive, this item larger than argument:    simple subtraction a - b
+     //    3. one positive one no sign, this item larger than arg:    simple subtraction a - b
+     //    4. no signs at all, this item smaller than argument:       swap a & b, subtract a - b, result negative
+     //    5. both signs positive, this item smaller than argument:   swap a & b, subtract a - b, result negative
+     //    6. one positive one no sign, this item smaller than arg:   swap a & b, subtract a - b, result negative
+     //    7. this no sign or positive, arg negative:                 remove neg from arg and call this.add( arg )
+     //    8. this negative, arg positive:                            add negative to arg and call this.add( arg )
+     //    9. both signs negative, this larger abs than arg abs:      remove signs, subtract, add neg to result
+     //   10. both signs negative, this smaller abs than arg abs:     remove signs, swap a & b, subtract, result pos

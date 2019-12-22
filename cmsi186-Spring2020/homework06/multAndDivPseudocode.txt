@@ -1,0 +1,110 @@
+
+
+   public BrobInt multiply( BrobInt gint ) {
+
+     // check for the signs; if not the same, the result should be negative
+     //  this can be done in one line with an OR of two ANDs
+
+     // dimension the byte arrays and initialize them appropriately for their lengths;
+     //   'a' gets the longer string, 'b' gets the shorter one
+     //   IF MY string is longer than ARGUMENT's string:
+     //     dimension 'a' to be proper number of elements for ME
+     //     in a loop, convert the value of MY digit[s] and put into a's element[s]
+     //     dimension 'b' to be proper number of elements for ARGUMENT
+     //     in a loop, convert the value of ARGUMENT's digit[s] and put into b's elements[s]
+     //   ELSE
+     //     dimension 'a' to be proper number of elements for ARGUMENT
+     //     in a loop, convert the value of ARGUMENT digit[s] and put into a's element[s]
+     //     dimension 'b' to be proper number of elements for ME
+     //     in a loop, convert the value of ME's digit[s] and put into b's elements[s]
+
+     // dimension and zero out the result array
+     //   dimension 'c' to be total of a's elements plus b's elements plus one
+     //   in a loop, put zero in each element of 'c'
+
+     // this is the multiplication loop; we handle the addition with each iteration
+     //  multiply each digit in 'a' by each digit in 'b' sequentially, while also
+     //  handling the carry and the addition of the previous sum of digits in the column
+     //
+     // FOR each element in 'b' (shortest number) using 'i'
+     //   set 'k' = 'i'
+     //   FOR each element in 'a' (longest number) using 'j'
+     //      multiply a[j] times b[i] and add carry and what's already at c[k]
+     //      IF c[k] > 9
+     //         handle carry
+     //      ELSE
+     //         clear carry
+     //      increment 'k'
+     //   END FOR
+     //   check and handle final carry
+     //   clear carry
+     // END FOR
+
+     // create a new StringBuffer
+     // loop to add each element of 'c' to StringBuffer
+
+     // IF carry
+     //    add value of carry to StringBuffer
+
+     // IF negative
+     //    add negative sign to StringBuffer
+
+     // NOTE: if handling things in reverse order, reverse the string
+     //  calling StringBuffer's "reverse()" method
+
+     // remove leading zeros
+
+     // return a new BrobInt passing result string
+      return new BrobInt( result_s );
+
+   }
+
+
+   public BrobInt divide( BrobInt gint ) {
+
+     // for implementation, in this discussion/comment/steps:
+     //  0. divisor [passed in as ARGUMENT] is "d1"
+     //     dividend [ME] is "d2"
+     //     current dividend being handled is "d3"
+     //     quotient is "q" and string length count is "n"
+     //        for example, 56789 divided by 37: d1 == 37 and d2 == 56789
+     //                     d3 starts with 56 and goes on adding single digits with each iteration
+     //                     "q" starts at zero, and "n" starts at 2
+
+     //  1. is d1 == 0?  if so, throw IllegalArgumentException
+     //  IF ARGUMENT is equal to BrobInt.ZERO
+     //     throw new IllegalArgumentException
+
+     //  2. is d1 == d2? if so, return BrobInt.ONE
+
+     //  3. is d1 > d2?  if so, return BrobInt.ZERO  [INTEGER ARITHMETIC!!!]
+
+     //  4. otherwise, get length of d1 and put into "n"
+
+     //  5. extract that many characters from the front of d2 and put into d3
+
+     //  6. is d1 > d3?  if so, add one to "n" and re-extract characters from d2 into d3
+
+     //  7. while "n" <= d2.toString().length()
+
+        // a. while d3 > d1:
+        //     i. subtract d1 from d3 [ gint.subtract( this ) ]
+        //    ii. add one to quotient [ q.add( BrobInt.ONE ) ]
+
+        // b. d3 now has any remainder [e.g., 56 - 37 = 19, "q" is one and d3 is 19]
+
+        // c. if "n++" is equal to d1.toString().length() then we are done -- break
+
+        // d. multiply d3 by 10 using d3.multiply( BrobInt.TEN )
+
+        // e. multiply "q" by 10 using q.multiply( BrobInt.TEN )
+
+        // f. extract next digit from d2 using d2.toString().substring( n-1, n )
+        // g. add current value of d3 to extracted digit [e.g., get "7" from d2, concat to d3 to make "197"]
+
+     //  END WHILE
+
+     //  8. return "q" value which is already a BrobInt
+
+   }
+
