@@ -1,6 +1,6 @@
 # CMSI 186: Homework Assignment #2
 ## Problems About Estimation
-### [Familiarity with Monte Carlo Simulations]<br />[Familiarity with Probability Estimation]
+### [Familiarity with Monte Carlo Simulations]
 ### Assignment Due: Monday, 2019-02-03
 
 #### For this homework, you must accomplish the following activities
