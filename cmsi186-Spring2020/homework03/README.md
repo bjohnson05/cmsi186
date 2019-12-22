@@ -75,5 +75,5 @@
 1.  Note that you should only allow the user to quit the game by using the QUIT option from the menu. That means you will implement a "good endless loop" as discussed in class.
 
 ### Submission Guidelines:
-Make a sub-directory in your repository as mentioned above, called "homework02" and commit your source code into it. DON'T FORGET TO ADD A COMMIT COMMENT!""
+Make a sub-directory in your repository as mentioned above, called "homework03" and commit your source code into it. DON'T FORGET TO ADD A COMMIT COMMENT!""
 
