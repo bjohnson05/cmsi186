@@ -1,6 +1,6 @@
-# CMSI 186: Homework Assignment #2
+# CMSI 186: Homework Assignment #3
 ## Problems About Dice [Familiarity with Java Classes]
-### Assignment Due: Wednesday,<br />2019-02-13 for section 05;<br />Thursday, 2019-02-14 for section 03
+### Assignment Due: Wednesday, 2019-02-12
 
 ## For this homework, accomplish the following activities:
 
@@ -26,7 +26,7 @@
 ### Next, make public class DiceSet which contains at the very least, the following methods:
 
 1.  **_public DiceSet( int k, int n )_**
-    // Constructor for a set of k dice each with n-sides (k ≥ 1 and n ≥ four)
+    // Constructor for a set of k dice each with n-sides (k ? 1 and n ? four)
 1.  **_public int sum()_**
     // Returns the present sum of this set of dice
 1.  **_public void roll()_**
@@ -60,7 +60,7 @@
     **_java HighRoll &lt;number of dice&gt; &lt;number of sides&gt;_**<br /><br />
     OR using...<br /><br />
     **_java HighRoll_** and prompt the user for the parameters
-  
+
 4.  See the notes below.
 
 ### Notes:
