@@ -10,11 +10,11 @@ Not to worry! With the *command line*, you'll have them straightened out in no t
 
 ## Task
 
-Make sure every song artist is in the correct genre folder (note: there might be multiple genres that fit, so feel free to make copies of some artists and put them into multiple genre folders) and that each artist folder has the right artist inside it.  Be careful or you might end up listening to the Dolly Parton instead of Nicki Minaj!
+Download the zip file from this repo to your local hard drive, and unzip it into your <q>homework01</q> folder.  Then rearrange all the files and folders to make sure every song artist is in the correct genre folder (note: there might be multiple genres that fit, so feel free to make copies of some artists and put them into multiple genre folders) and that each artist folder has the right artist inside it.  Be careful or you might end up listening to Dolly Parton instead of Nicki Minaj!
 
-You can start by using the GUI (i.e., you can move documents around by clicking and dragging from one folder to another), but once you're comfortable doing that, you should face this challenge straight from the command line using a terminal window.
+You can start by using the GUI (i.e., you can move documents around by clicking and dragging from one folder to another in either Windows or mac O/S), but once you're comfortable doing that, you should face this challenge straight from the command line using a terminal window.
 
-Congratulations! You've officially learned how to speak computer. Ready to take it a step further? Let's talk extensions...
+Once everything is in the right place, <em>CONGRATULATIONS</em>!  You've officially learned how to speak <q>computerese</q>. Ready to take it a step further?  Let's talk extensions...
 
 ## Extensions
 
@@ -23,6 +23,6 @@ Congratulations! You've officially learned how to speak computer. Ready to take 
 
 ## What to turn in
 
-0. On the handout provided in class, write down all the commands you used to organize the file.  Don't worry about efficiency ~ you should feel free to explore!  Include commands such as ```ls``` or ```pwd``` or ```dir``` or ```ren``` that helped you to figure out where everything was located.
+0. Write down all the commands you used to organize the file.  Don't worry about efficiency for now ~ you should feel free to explore!  Include commands such as ```ls``` or ```pwd``` or ```dir``` or ```ren``` that helped you to figure out where everything was located.
 1. If you did any extensions, write down the commands you used for those as well.
-2. Push all the directories with their newly sorted files to your GitHub repo under ```homework01```.
+2. Push all the directories with their newly sorted files to your GitHub repo under your ```homework01``` folder/directory.
