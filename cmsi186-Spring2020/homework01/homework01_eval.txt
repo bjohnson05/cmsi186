@@ -1,0 +1,36 @@
+
+Evaluation for homework01
+=========================
+
+This assignment is designed to give you experience with the command line.
+
+Per the specifications, you will need to have a file in your repo with the
+commands you used to complete the assignment, along with either the completed
+re-ordered directory structure and files, or a zipped archive containing that
+structure and files.
+
+This assignment is pass/fail.  If you have the two parts completed, you pass!
+
+I took a look at the "what to turn in" section of the requirements, and I see
+that I didn't *specifically* ask for the file containing the commands that
+you used, so I'm giving everyone that point for free!
+
+If you have any questions about the command line or how to use any of these
+commands, feel free to ask me or any of the TA's in the Lab for explanations.
+
+
+Here is the breakdown:
+
+
+file with list of commands in repo          1 pt.  [freebie]
+zipped file of directories
+   or complete directory structure in repo  1 pt.
+
+
+You have met the requirements:  PASS
+
+
+
+
+Nice work!  Now, on to homework02.
+

@@ -1,0 +1,24 @@
+  *  music-mashup\country\BobMarley\Guns-n-Roses.jpg
+  *  music-mashup\country\NickiMinaj\FourTops.jpg
+  *  music-mashup\country\OhioPlayers\BobMarley.jpg
+
+  *  music-mashup\funk\AlanisMorissette\juice-wrld_12.jpg
+  *  music-mashup\funk\GunsNRoses\DollyParton.jpg
+  *  music-mashup\funk\FourTops\cardi-b_18.jpg
+
+  *  music-mashup\hip-hop-rap\PatsyCline\Funkadelic.jpg
+  *  music-mashup\hip-hop-rap\Aerosmith\nicki-minaj_13.jpg
+  *  music-mashup\hip-hop-rap\SmokeyRobinson\AlanisMorissette.png
+
+  *  music-mashup\reggae\Funkadelic\GarthBrooks.jpg
+  *  music-mashup\reggae\GarthBrooks\OhioPlayers.jpg
+  *  music-mashup\reggae\Temptations\Beat65ToshCover.jpg
+
+  *  music-mashup\rock\PeterTosh\SmokeyRobinson.jpg
+  *  music-mashup\rock\CardiB\JimmyCliff.jpg
+  *  music-mashup\rock\EarthWindAndFire\Temptations.jpg
+
+  *  music-mashup\soul\DollyParton\EarthWindAndFire.jpg
+  *  music-mashup\soul\JimmyCliff\aerosmith.jpg
+  *  music-mashup\soul\JuiceWrld\PatsyCline.jpg
+

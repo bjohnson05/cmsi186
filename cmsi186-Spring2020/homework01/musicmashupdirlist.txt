@@ -1,0 +1,48 @@
+  *  music-mashup\country
+  *  music-mashup\funk
+  *  music-mashup\hip-hop-rap
+  *  music-mashup\reggae
+  *  music-mashup\rock
+  *  music-mashup\soul
+
+* *  music-mashup\country\DollyParton
+* *  music-mashup\country\GarthBrooks
+* *  music-mashup\country\PatsyCline
+* *  music-mashup\country\DollyParton\DollyParton.jpg
+* *  music-mashup\country\GarthBrooks\GarthBrooks.jpg
+* *  music-mashup\country\PatsyCline\PatsyCline.jpg
+
+* *  music-mashup\funk\EarthWindAndFire
+* *  music-mashup\funk\Funkadelic
+* *  music-mashup\funk\OhioPlayers
+* *  music-mashup\funk\EarthWindAndFire\EarthWindAndFire.jpg
+* *  music-mashup\funk\Funkadelic\Funkadelic.jpg
+* *  music-mashup\funk\OhioPlayers\OhioPlayers.jpg
+
+* *  music-mashup\hip-hop-rap\CardiB
+* *  music-mashup\hip-hop-rap\JuiceWrld
+* *  music-mashup\hip-hop-rap\NickiMinaj
+* *  music-mashup\hip-hop-rap\CardiB\cardi-b_18.jpg
+* *  music-mashup\hip-hop-rap\JuiceWrld\juice-wrld_12.jpg
+* *  music-mashup\hip-hop-rap\NickiMinaj\nicki-minaj_13.jpg
+
+* *  music-mashup\reggae\BobMarley
+* *  music-mashup\reggae\JimmyCliff
+* *  music-mashup\reggae\PeterTosh
+* *  music-mashup\reggae\BobMarley\BobMarley.jpg
+* *  music-mashup\reggae\JimmyCliff\JimmyCliff.jpg
+* *  music-mashup\reggae\PeterTosh\Beat65ToshCover.jpg
+
+* *  music-mashup\rock\Aerosmith
+* *  music-mashup\rock\AlanisMorissette
+* *  music-mashup\rock\GunsNRoses
+* *  music-mashup\rock\Aerosmith\aerosmith.jpg
+* *  music-mashup\rock\AlanisMorissette\AlanisMorissette.png
+* *  music-mashup\rock\GunsNRoses\Guns-n-Roses.jpg
+
+* *  music-mashup\soul\FourTops
+* *  music-mashup\soul\SmokeyRobinson
+* *  music-mashup\soul\Temptations
+* *  music-mashup\soul\FourTops\FourTops.jpg
+* *  music-mashup\soul\SmokeyRobinson\SmokeyRobinson.jpg
+* *  music-mashup\soul\Temptations\Temptations.jpg
