@@ -3,7 +3,7 @@
  *  Purpose       :  Demonstrates the use of input from a command line for use with Yahtzee
  *  Author        :  B.J. Johnson
  *  Date          :  2017-02-14
- *  Description   :  
+ *  Description   :
  *  Notes         :  None
  *  Warnings      :  None
  *  Exceptions    :  None
@@ -28,7 +28,7 @@ public class MainProgLoopDemo{
      // text into the program
       BufferedReader input = new BufferedReader( new InputStreamReader( System.in ) );
       while( true ) {
-         System.out.print( ">>" );
+         System.out.print( "prompt >>" );
          String inputLine = null;
          try {
             inputLine = input.readLine();
