@@ -24,7 +24,7 @@
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 import java.text.DecimalFormat;
 
-public class Ball {
+public class BallEmpty {
 
    private static final double BALL_RADIUS          = 4.45;    // radius in inches as given by the problem
    private static final double BALL_WEIGHT          = 1.0;     // weight in pounds as given
@@ -45,7 +45,7 @@ public class Ball {
    *  @param xMovement double-precision value for the initial speed of the ball in X direction
    *  @param yMovement double-precision value for the initial speed of the ball in Y direction
    */
-   public Ball( double xLocation, double yLocation, double xMovement, double yMovement ) {
+   public BallEmpty( double xLocation, double yLocation, double xMovement, double yMovement ) {
       centerLocation[0] = xLocation;
       centerLocation[1] = yLocation;
       currentSpeed[0]   = xMovement;
