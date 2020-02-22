@@ -1,0 +1,66 @@
+     // this is just to locate you in the process -- I know YOU know this belongs here...
+     //  BTW, the indenting implies the if statements needed
+
+      for( int i = 0; i < rowCount; i++ ) {
+         for( int j = 0; j < columnCount; j++ ) {
+
+           // Special case for column zero for all rows
+            if( j == 0 ) {
+
+           // Otherwise, this is NOT column zero
+            } else {
+
+              // check to see if we CAN take ONE thing out of the current value;
+              //  if we CAN'T take one of the denominations out of the value of "j"
+              //   impossible, at least temporarily
+               if( some_check_to_see_if_we_can_take_ONE_thing_out_of_the_current_value ) {
+
+                 // look backward to see if there is a valid/impossible solution
+                 //  if there is, copy it over and add/replace the one that is there
+                  if( some_check_to_see_if_we_are_ABLE_to_look_backwards ) {
+
+                    // if the cell looking backward is NOT an "IMPOSSIBLE", add it
+
+                  }
+
+                 // if this is NOT row zero we need to look above to see if there is
+                 //  a better/non-impossible solution; if so, copy it down
+                  if( i != 0 ) {
+
+                    // if the cell above is impossible, basically do nothing since
+                    //  this the current cell is already IMPOSSIBLE
+
+                    // else if the cell above has a total that is less than the current
+                    //  cell, copy it down
+                     }
+                  }
+
+              // ELSE -- we *CAN* take one current denomination out
+               } else {
+
+                 // make a new tuple with a one in the current demonimation index
+
+
+                 // look backward to see if there is a valid/impossible solution
+                  if( (j - denominations[i]) >= 0 ) {
+
+                    // if it's IMPOSSIBLE, mark the current cell IMPOSSIBLE, too
+
+                    // else, add the previous cell to the current cell
+                  }
+
+                 // if this is NOT row zero we need to look above to see if there is
+                 //  a better/non-impossible solution; if so, copy it down
+                  if( i != 0 ) {
+
+                    // if the cell above is impossible, basically do nothing since
+                    //  this the current cell is already IMPOSSIBLE
+
+                    // else if the cell above has a total that is less than the current
+                    //  cell, copy it down
+                     }
+                  }
+               }
+            }
+         }
+      }
