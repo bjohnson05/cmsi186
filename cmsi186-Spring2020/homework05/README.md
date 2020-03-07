@@ -61,4 +61,3 @@ Notes:
 1. Making the pole a point means you have to have a separate collision detection loop for the pole.
 
 Submission Guidelines: Make a sub-directory in your repository as mentioned above, called "homework04" and commit your source code into it. DON'T FORGET TO ADD A COMMIT COMMENT!""
-
