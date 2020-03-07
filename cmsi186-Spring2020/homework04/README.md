@@ -4,7 +4,7 @@
 ### Assignment Due: Wednesday, 2020-02-26
 
 <blockquote>
-#### _Learning Outcomes_: Students will (1) understand the mathematics of simple motion, collision detection, and friction simulation, and (2) gain further experience with "clean" separation of concerns in an object-oriented design philosophy.
+Learning Outcomes: Students will (1) understand the mathematics of simple motion, collision detection, and friction simulation, and (2) gain further experience with "clean" separation of concerns in an object-oriented design philosophy.
 </blockquote>
 
 <strong>In this assignment, you will program a discrete simulation of a physical system in order to answer some questions about its behavior. For this homework, accomplish the following activities to make a Java program, <code>SoccerSim</code>, that solves the following problem:
