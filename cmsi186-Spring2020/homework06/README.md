@@ -4,7 +4,7 @@
 ### Assignment Due:<br /> Monday, 2020-04-06
 
 <blockquote>
-Learning Outcomes: Students will (1) implement an independent version of arbitrary-length string arithmetic; (2) understand the concept of breaking a large problem into smaller parts; (3) get a chance to explore [Public-key Cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography); and (4) learn to document code using the "javadocs" tool.
+Learning Outcomes: Students will (1) implement an independent version of arbitrary-length string arithmetic; (2) understand the concept of breaking a large problem into smaller parts; (3) get a chance to explore Public-key Cryptography; and (4) learn to document code using the "javadocs" tool.
 </blockquote>
 
 ## For this homework:
@@ -43,7 +43,7 @@ You will develop public class <code>BrobdingnagianInt</code>, [also known as "Br
 // a BrobInt classwide constant for ten<br />
 1. Following the programming practice known as Test Driven Development [TDD] you must first construct unit tests for the above items <em>before coding the methods themselves</em>.  Use the main() method of your class to invoke these unit tests. [In other words, the command <code>java BrobIntTester</code> will run your unit tests.]  Try using Java's <code>assert</code> statement in the tests you write; or even better, use <strong>JUnit</strong>.
 1. Complete as many of the items as possible. All incomplete items must throw an exception; use <strong><code>UnsupportedOperationException</code></strong>.
-1. For part two of this assignment, create program <strong>Collatz.java</strong> which takes in a BrobInt [meaning a long string of digits] and determines the number of steps in the Collatz Sequence.  This is the sequence we saw in the CMSI 185 homework that takes an integer number as input, then generates a sequence of values based upon whether the current value is even or odd; if it is even, the value is divided by 2, and if it is odd, the value is multiplied by three then one is added to that result.  The program should output both the sequence and the number of steps.
+1. For part two of this assignment, create program <strong>Collatz.java</strong> which takes in a BrobInt [meaning a long string of digits] and determines the number of steps in the Collatz Sequence.  This is the sequence we saw in the CMSI 185 homework that takes an integer number as input, then generates a sequence of values based upon whether the current value is even or odd; if it is even, the value is divided by 2, and if it is odd, the value is multiplied by three then one is added to that result.  The program should output both the sequence and the number of steps. [Public-key Cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography)
 ## Notes and Suggestions:
 1. <strong>Do not be fooled by appearances</strong>: this assignment is a lot more challenging than it looks. The good news is that for each operation, you already have detailed knowledge of some algorithm — although you will discover that expressing the algorithms in a computer programming language is a whole new can of worms!
 1. <strong>There will be at least three Java files for this assignment</strong>:<br />
