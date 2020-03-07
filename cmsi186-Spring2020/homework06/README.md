@@ -4,7 +4,7 @@
 ### Assignment Due:<br /> Monday, 2020-04-06
 
 <blockquote>
-Learning Outcomes: Students will (1) implement an independent version of arbitrary-length string arithmetic; (2) understand the concept of breaking a large problem into smaller parts; (3) get a chance to explore ["Public-key Cryptography"](https://en.wikipedia.org/wiki/Public-key_cryptography); and (4) learn to document code using the "javadocs" tool.
+Learning Outcomes: Students will (1) implement an independent version of arbitrary-length string arithmetic; (2) understand the concept of breaking a large problem into smaller parts; (3) get a chance to explore [Public-key Cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography); and (4) learn to document code using the "javadocs" tool.
 </blockquote>
 
 ## For this homework:
