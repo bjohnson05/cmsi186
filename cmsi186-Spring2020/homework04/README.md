@@ -1,9 +1,9 @@
 
-# <span style='background-color: #abcdef'>CMSI 186: Homework Assignment #4</span>
+# CMSI 186: Homework Assignment #4
 ## Problems About Soccer Balls [Discrete Simulations]
 ### Assignment Due: Wednesday, 2020-02-26
 
-#### <span style='background-color: #80ff00'>_Learning Outcomes_: Students will (1) understand the mathematics of simple motion, collision detection, and friction simulation, and (2) gain further experience with "clean" separation of concerns in an object-oriented design philosophy.</span>
+#### _Learning Outcomes_: Students will (1) understand the mathematics of simple motion, collision detection, and friction simulation, and (2) gain further experience with "clean" separation of concerns in an object-oriented design philosophy.
 
 <strong>In this assignment, you will program a discrete simulation of a physical system in order to answer some questions about its behavior. For this homework, accomplish the following activities to make a Java program, <code>SoccerSim</code>, that solves the following problem:
 
