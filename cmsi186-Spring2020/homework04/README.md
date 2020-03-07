@@ -7,7 +7,7 @@
 Learning Outcomes: Students will (1) understand the mathematics of simple motion, collision detection, and friction simulation, and (2) gain further experience with "clean" separation of concerns in an object-oriented design philosophy.
 </blockquote>
 
-<strong>In this assignment, you will program a discrete simulation of a physical system in order to answer some questions about its behavior. For this homework, accomplish the following activities to make a Java program, <code>SoccerSim</code>, that solves the following problem:
+In this assignment, you will program a discrete simulation of a physical system in order to answer some questions about its behavior. For this homework, accomplish the following activities to make a Java program, <code>SoccerSim</code>, that solves the following problem:
 
 Simultaneously, on a perfectly flat playground, at time 00:00:00.0 (hrs:mins:secs), an arbitrary number of soccer balls are kicked, all at different speeds and directions. We wish to find out, via a discrete simulation of the system, whether a collision will ever take place, and, if so, where and when. Each ball has a radius of 4.45 inches and weighs one pound. The center of the playground is presumed to be the point (x,y) = (0.0,0.0). The following additional conditions apply:
 
