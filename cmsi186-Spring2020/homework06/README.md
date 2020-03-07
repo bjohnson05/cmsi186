@@ -3,12 +3,16 @@
 ## Problems About Giant-sized Integer Numbers
 ### Assignment Due:<br /> Monday, 2020-04-06
 
+<blockquote>
+Learning Outcomes: Students will (1) implement an independent version of arbitrary-length string arithmetic; (2) understand the concept of breaking a large problem into smaller parts; (3) get a chance to explore [Public-key Cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography); and (4) learn to document code using the "javadocs" tool.
+</blockquote>
+
 ## For this homework:
-You will develop public class <strong>BrobdingnagianInt</strong>, whose objects model arbitrarily-large integers.  Basically, you are being asked to re-invent some of the material of <code>java.math.BigInteger</code> to accomplish the following activities.
+You will develop public class <code>BrobdingnagianInt</code>, [also known as "BrobInt"], whose objects model arbitrarily-large integers.  Basically, you are being asked to re-invent some of the material of <code>java.Math.BigInteger</code> to accomplish the following activities.
 
 ### Ground Rules
-1. You must implement your class from first principles; in particular, you may not make use of java.math.BigInteger or any related device, except for testing purposes if you want to check on the correctness of your test results for your <code>BrobdingnagianInt</code> class.
-1. In the descriptions that follow, the word this refers to an instantiated object of your <code>BrobdingnagianInt</code> class.
+1. You must implement your class from first principles; in particular, you may not make use of java.Math.BigInteger or any related device [except for testing purposes if you want to check on the correctness of your test results for your <code>BrobdingnagianInt</code> class].
+1. In the descriptions that follow, the word <code>"this"</code> refers to an instantiated object of your <code>BrobdingnagianInt</code> class.
 1. It is recommended for testing purposes that you abbreviate <strong>BrobdingnagianInt</strong> as <strong>BrobInt</strong> which will be much easier to type.  You will be typing this over and over and over and over, so it is best if you get used to the shorter name from the start.
 1. Although it can contain more methods [see java.math.BigInteger for more ideas], your class must include <strong>at least</strong> the following items:
     1. <code>public BrobInt( String value )</code><br />
