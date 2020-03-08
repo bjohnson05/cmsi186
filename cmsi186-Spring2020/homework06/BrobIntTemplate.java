@@ -275,7 +275,7 @@ public class BrobIntTemplate {
    *  @param   d  byte array from which to display the contents
    *  NOTE: may be changed to int[] or some other type based on requirements in code above
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-   public void toArray( byte[] d ) {
+   public void toArray( int[] d ) {
       System.out.println( "Array contents: " + Arrays.toString( d ) );
    }
 
@@ -305,9 +305,10 @@ public class BrobIntTemplate {
 
       BrobInt b1 = null;;
       try { System.out.println( "   Making a new BrobInt: " ); b1 = new BrobInt( "147258369789456123" ); }
-      catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
       try { System.out.println( "   expecting: 147258369789456123\n     and got: " + b1.toString() ); }
-      catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
+
       System.out.println( "\n    Multiplying 82832833 by 3: " );
       try { System.out.println( "      expecting: 248498499\n        and got: " + new BrobInt("82832833").multiply( BrobInt.THREE ) ); }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
@@ -315,6 +316,16 @@ public class BrobIntTemplate {
       System.out.println( "\n    Multiplying 3 by 82832833 and adding 1: " );
       try { System.out.println( "      expecting: 248498500\n        and got: " + BrobInt.THREE.multiply( new BrobInt( "82832833" ) ).add( BrobInt.ONE ) ); }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
+
+      try { System.out.println( "\n\n   Making a new BrobInt: " ); b1 = new BrobInt( "-99999" ); }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
+      System.out.println( "\n   Testing equals() method on b1 of -99999 and b2 of 99999: " );
+      try { System.out.println( "      expecting: false\n        and got: " + b1.equals( new BrobInt( "99999" ) ) ); }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
+      System.out.println( "\n   Testing equals() method on b1 of -99999 and b2 of -99999: " );
+      try { System.out.println( "      expecting: true\n        and got: " + b1.equals( new BrobInt( "-99999" ) ) ); }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
+
       System.exit( 0 );
 
    }

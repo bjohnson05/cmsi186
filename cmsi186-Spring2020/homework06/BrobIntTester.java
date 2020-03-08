@@ -271,13 +271,13 @@ public class BrobIntTester {
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
 
       try {
-         System.out.println( "    Test " + df.format( testNumber++ ) + ": Adding g11 and g13 [10 + 234567] using bytes: " );
+         System.out.println( "    Test " + df.format( testNumber++ ) + ": Adding g11 and g13 [10 + 234567]: " );
          System.out.println( "      expecting: 234577 and got " + g11.add( g13 ) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
 
       try {
-         System.out.println( "    Test " + df.format( testNumber++ ) + ": Adding g13 and g11 [234567 + 10] using bytes: " );
+         System.out.println( "    Test " + df.format( testNumber++ ) + ": Adding g13 and g11 [234567 + 10]: " );
          System.out.println( "      expecting: 234577 and got " + g13.add( g11 ) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
@@ -307,13 +307,13 @@ public class BrobIntTester {
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
 
       try {
-         System.out.println( "    Test " + df.format( testNumber++ ) + ": Adding g14 and g15 [-234567 + -10] using bytes: " );
+         System.out.println( "    Test " + df.format( testNumber++ ) + ": Adding g14 and g15 [-234567 + -10]: " );
          System.out.println( "      expecting: -234577 and got " + g14.add( g15 ) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
 
       try {
-         System.out.println( "    Test " + df.format( testNumber++ ) + ": Adding g15 and g14 [-10 + -234567] using bytes: " );
+         System.out.println( "    Test " + df.format( testNumber++ ) + ": Adding g15 and g14 [-10 + -234567]: " );
          System.out.println( "      expecting: -234577 and got " + g15.add( g14 ) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
@@ -327,23 +327,27 @@ public class BrobIntTester {
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
 
       try {
-         System.out.println( "    Test " + df.format( testNumber++ ) + ": Adding g14 and g16 [-234567 + -999999] using bytes: " );
+         System.out.println( "    Test " + df.format( testNumber++ ) + ": Adding g14 and g16 [-234567 + -999999]: " );
          System.out.println( "      expecting: -1234566 and got " + g14.add( g16 ) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
 
       try {
-         System.out.println( "    Test " + df.format( testNumber++ ) + ": Adding g16 and g14 [-999999 + -234567] using bytes: " );
+         System.out.println( "    Test " + df.format( testNumber++ ) + ": Adding g16 and g14 [-999999 + -234567]: " );
          System.out.println( "      expecting: -1234566 and got " + g16.add( g14 ) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
 
       try {
-         System.out.println( "\n    Test " + df.format( testNumber++ ) + ": Adding g1 and g4 using bytes: " );
+         System.out.println( "\n    Test " + df.format( testNumber++ ) + ": Adding g1 and g4: " );
          System.out.println( "      expecting: 144127909719725076806064402568842359092656528233967026820237074760\n" +
                              "        and got: " + g1.add( g4 ) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
+
+     // added note which needs to be taken care of in the next iteration....
+      System.out.println( "\n   NOTE: Never tested addition of unlike signs ~~\n" +
+                          "    this situation is not accounted for in my BrobInt.java file as yet." );
 
       System.out.println( "\n\n    TESTING COMPARETO() METHOD:\n" +
                           "    ===========================\n" +
@@ -416,51 +420,69 @@ public class BrobIntTester {
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
 
+      try {
+         System.out.println( "\n    Test " + df.format( testNumber++ ) + "f: Checking compareTo() method on -23456.compareTo -234: "  );
+         System.out.println( "      expecting: negative value and got: " + new BrobInt( "-23456" ).compareTo( new BrobInt( "-234" ) ) );
+      }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
+
+      try {
+         System.out.println( "\n    Test " + df.format( testNumber++ ) + "f: Checking compareTo() method on -234.compareTo -23456: "  );
+         System.out.println( "      expecting: positive value and got: " + new BrobInt( "-234" ).compareTo( new BrobInt( "-23456" ) ) );
+      }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
+
+      try {
+         System.out.println( "\n    Test " + df.format( testNumber++ ) + "f: Checking compareTo() method on -100000.compareTo -100001: "  );
+         System.out.println( "      expecting: positive value and got: " + new BrobInt( "-100000" ).compareTo( new BrobInt( "-100001" ) ) );
+      }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
+
       System.out.println( "\n\n    TESTING SUBTRACT() METHOD:\n" +
                           "    ==========================" );
-      System.out.println( "\n    Test " + df.format( testNumber++ ) + ": Subtracting g13 take away g11 [234567 - 10] using bytes: " );
+      System.out.println( "\n    Test " + df.format( testNumber++ ) + ": Subtracting g13 take away g11 [234567 - 10]: " );
       try {
          System.out.println( "      expecting: 234557\n" +
                              "        and got: " + g13.subtract( g11 ) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
 
-      System.out.println( "\n    Test " + df.format( testNumber++ ) + ": Subtracting g11 take away g13 [10 - 234567] using bytes: " );
+      System.out.println( "\n    Test " + df.format( testNumber++ ) + ": Subtracting g11 take away g13 [10 - 234567]: " );
       try {
          System.out.println( "      expecting: -234557\n" +
                              "        and got: " + g11.subtract( g13 ) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
 
-      System.out.println( "\n    Test " + df.format( testNumber++ ) + ": Subtracting g13 take away g15 [234567 - (-10)] using bytes: " );
+      System.out.println( "\n    Test " + df.format( testNumber++ ) + ": Subtracting g13 take away g15 [234567 - (-10)]: " );
       try {
          System.out.println( "      expecting: 234577\n" +
                              "        and got: " + g13.subtract( g15 ) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
 
-      System.out.println( "\n    Test " + df.format( testNumber++ ) + ": Subtracting g15 take away g13 [(-10) - 234567] using bytes: " );
+      System.out.println( "\n    Test " + df.format( testNumber++ ) + ": Subtracting g15 take away g13 [(-10) - 234567]: " );
       try {
          System.out.println( "      expecting: -234577\n" +
                              "        and got: " + g15.subtract( g13 ) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
 
-      System.out.println( "\n    Test " + df.format( testNumber++ ) + ": Subtracting g14 take away g16 [(-234567) - (-999999)] using bytes: " );
+      System.out.println( "\n    Test " + df.format( testNumber++ ) + ": Subtracting g14 take away g16 [(-234567) - (-999999)]: " );
       try {
          System.out.println( "      expecting: 765432\n" +
                              "        and got: " + g14.subtract( g16 ) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
 
-      System.out.println( "\n    Test " + df.format( testNumber++ ) + ": Subtracting g16 take away g14 [(-999999) - (-234567)] using bytes: " );
+      System.out.println( "\n    Test " + df.format( testNumber++ ) + ": Subtracting g16 take away g14 [(-999999) - (-234567)]: " );
       try {
          System.out.println( "      expecting: -765432\n" +
                              "        and got: " + g16.subtract( g14 ) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
 
-      System.out.println( "\n    Test " + df.format( testNumber++ ) + ": Subtracting g1 take away g1 [too long to list] using bytes: " );
+      System.out.println( "\n    Test " + df.format( testNumber++ ) + ": Subtracting g1 take away g1 [too long to list]: " );
       try {
          System.out.println( "      expecting: 000000000000000000000000000000000000000000000000000000000000000000\n" +
                              "        and got: " + g1.subtract( g1 ) );
