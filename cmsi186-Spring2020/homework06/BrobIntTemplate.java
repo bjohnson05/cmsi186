@@ -301,7 +301,7 @@ public class BrobIntTemplate {
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public static void main( String[] args ) {
       System.out.println( "\n  Hello, world, from the BrobInt program!!\n" );
-      System.out.println( "\n   You should run your tests from the BrobIntTester...\n" );
+      System.out.println( "\n   You should run your tests from the BrobIntTester, but here are a few...\n" );
 
       BrobInt b1 = null;;
       try { System.out.println( "   Making a new BrobInt: " ); b1 = new BrobInt( "147258369789456123" ); }
