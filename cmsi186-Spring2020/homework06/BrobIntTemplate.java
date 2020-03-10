@@ -30,24 +30,24 @@ import java.io.IOException;
 
 public class BrobIntTemplate {
 
-   public static final BrobInt ZERO     = new BrobInt(  "0" );      /// Constant for "zero"
-   public static final BrobInt ONE      = new BrobInt(  "1" );      /// Constant for "one"
-   public static final BrobInt TWO      = new BrobInt(  "2" );      /// Constant for "two"
-   public static final BrobInt THREE    = new BrobInt(  "3" );      /// Constant for "three"
-   public static final BrobInt FOUR     = new BrobInt(  "4" );      /// Constant for "four"
-   public static final BrobInt FIVE     = new BrobInt(  "5" );      /// Constant for "five"
-   public static final BrobInt SIX      = new BrobInt(  "6" );      /// Constant for "six"
-   public static final BrobInt SEVEN    = new BrobInt(  "7" );      /// Constant for "seven"
-   public static final BrobInt EIGHT    = new BrobInt(  "8" );      /// Constant for "eight"
-   public static final BrobInt NINE     = new BrobInt(  "9" );      /// Constant for "nine"
-   public static final BrobInt TEN      = new BrobInt( "10" );      /// Constant for "ten"
+   // public static final BrobInt ZERO     = new BrobInt(  "0" );      /// Constant for "zero"
+   // public static final BrobInt ONE      = new BrobInt(  "1" );      /// Constant for "one"
+   // public static final BrobInt TWO      = new BrobInt(  "2" );      /// Constant for "two"
+   // public static final BrobInt THREE    = new BrobInt(  "3" );      /// Constant for "three"
+   // public static final BrobInt FOUR     = new BrobInt(  "4" );      /// Constant for "four"
+   // public static final BrobInt FIVE     = new BrobInt(  "5" );      /// Constant for "five"
+   // public static final BrobInt SIX      = new BrobInt(  "6" );      /// Constant for "six"
+   // public static final BrobInt SEVEN    = new BrobInt(  "7" );      /// Constant for "seven"
+   // public static final BrobInt EIGHT    = new BrobInt(  "8" );      /// Constant for "eight"
+   // public static final BrobInt NINE     = new BrobInt(  "9" );      /// Constant for "nine"
+   // public static final BrobInt TEN      = new BrobInt( "10" );      /// Constant for "ten"
 
   /// Some constants for other intrinsic data types
   ///  these can help speed up the math if they fit into the proper memory space
-   public static final BrobInt MAX_INT  = new BrobInt( Integer.valueOf( Integer.MAX_VALUE ).toString() );
-   public static final BrobInt MIN_INT  = new BrobInt( Integer.valueOf( Integer.MIN_VALUE ).toString() );
-   public static final BrobInt MAX_LONG = new BrobInt( Long.valueOf( Long.MAX_VALUE ).toString() );
-   public static final BrobInt MIN_LONG = new BrobInt( Long.valueOf( Long.MIN_VALUE ).toString() );
+   // public static final BrobInt MAX_INT  = new BrobInt( Integer.valueOf( Integer.MAX_VALUE ).toString() );
+   // public static final BrobInt MIN_INT  = new BrobInt( Integer.valueOf( Integer.MIN_VALUE ).toString() );
+   // public static final BrobInt MAX_LONG = new BrobInt( Long.valueOf( Long.MAX_VALUE ).toString() );
+   // public static final BrobInt MIN_LONG = new BrobInt( Long.valueOf( Long.MIN_VALUE ).toString() );
 
   /// These are the internal fields
    public  String internalValue = "";        // internal String representation of this BrobInt
@@ -150,48 +150,57 @@ public class BrobIntTemplate {
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    *  Method to compare a BrobInt passed as argument to this BrobInt
    *  @param  bint  BrobInt to compare to this
-   *  @return int   that is one of neg/0/pos if this BrobInt precedes/equals/follows the argument
-   *  NOTE: this method does not do a lexicographical comparison using the java String "compareTo()" method
-   *        It takes into account the length of the two numbers, and if that isn't enough it does a
-   *        character by character comparison to determine
+   *  @return int   one of neg/0/pos if "this" BrobInt is less/equal/more than the "bint" BrobInt
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-   public int compareTo( BrobInt bint ) {
+   public int compareTo( BrobInt bint ) { 
 
      // remove any leading zeros because we will compare lengths
       String me  = removeLeadingZeros( this ).toString();
       String arg = removeLeadingZeros( bint ).toString();
 
+     // check if they are equal first, and return a zero if so
+      if( this.equals( bint ) ) {
+        return 0;
+      }
+
      // handle the signs here
+     //  if "this" is neg and "bint" is pos, "this" is smaller so return -1
       if( 1 == sign && 0 == bint.sign ) {
          return -1;
+
+     // if "this" is pos and "bint" is neg, "this" is larger so return +1
       } else if( 0 == sign && 1 == bint.sign ) {
          return 1;
-      } else if( 0 == sign && 0 == bint.sign ) {
-        // the signs are the same at this point ~ both positive
-        // check the length and return the appropriate value
-        //   1 means this is longer than bint, hence larger positive
-        //  -1 means bint is longer than this, hence larger positive
-         if( me.length() != arg.length() ) {
-            return (me.length() > arg.length()) ? 1 : -1;
+      }
+
+     // otherwise, signs are the same, so we must check the lengths
+     //  the longer one is going to be the MORE OF THAT SIGN
+     //  e.g., "-1111" for "this" is more neg than "-222" for "arg" so return -1
+      if( (1 == sign) && (1 == bint.sign) ) {
+         if( me.length() < arg.length() ) {
+            return 1;
+         } else if( me.length() > arg.length() ) {
+            return -1;
          }
-      } else {
-        // the signs are the same at this point ~ both negative
-         if( me.length() != arg.length() ) {
-            return (me.length() > arg.length()) ? -1 : 1;
+      } else if( (0 == sign) && (0 == bint.sign) ) {
+         if( me.length() < arg.length() ) {
+            return -1;
+         } else if( me.length() > arg.length() ) {
+            return 1;
          }
       }
 
-     // otherwise, they are the same length, so compare absolute values
+     // compare digit-by-digit
+     // can only go to the length of the shortest if they are different lengths
+      // int end = (me.length() < arg.length()) ? me.length() : arg.length();
       for( int i = 0; i < me.length(); i++ ) {
-         Character a = Character.valueOf( me.charAt(i) );
-         Character b = Character.valueOf( arg.charAt(i) );
-         if( Character.valueOf(a).compareTo( Character.valueOf(b) ) > 0 ) {
+         if( me.charAt(i) < arg.charAt(i) ) {
+            return -1;
+         } else if( me.charAt(i) > arg.charAt(i) ) {
             return 1;
-         } else if( Character.valueOf(a).compareTo( Character.valueOf(b) ) < 0 ) {
-            return (-1);
          }
       }
-      return 0;
+      return 0;      // if it gets here, just assume equality to fool the compiler
    }
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
