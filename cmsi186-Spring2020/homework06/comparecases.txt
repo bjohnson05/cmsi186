@@ -1,0 +1,30 @@
+
+     //
+     // set up for comparison of two BrobInt objects to decide which is greater, less, or if they are equal
+     //   in this write-up:
+     //      "this" means the object on which the "compareTo()" method is being called
+     //      "bint" means the object that is appsed to "compareTo()" as its argument
+     //   note that the entire process is based on handling the signs separately from the values
+     //
+     //  BOTH IDENTICAL VALUES:
+     //    0. easy to do a string comparison, or just call the "equals()" method: return 0
+     //
+     //  TWO POSITIVE VALUES
+     //    1. no signs at all, this larger than bint:            return +1
+     //    2. both have plus signs, this larger than bint:       return +1
+     //    3. one positive one no sign, this larger than bint:   return +1
+     //    4. no signs at all, this item smaller than bint:      return -1
+     //    4. both have plus signs, this smaller than bint:      return -1
+     //    5. one positive one no sign, this smaller than bint:  return -1
+     //
+     //  TWO NEGATIVE VALUES
+     //    6. both signs negative, this larger than bint:        return -1 [more negative]
+     //    7. both signs negative, this smaller than bint:       return +1 [more positive]
+     //
+     //  OPPOSITE SIGN VALUES
+     //    8. this pos, bint neg:                                return +1
+     //    9. this no sign, bint neg:                            return +1
+     //   10. this neg, bint pos:                                return -1
+     //   11. this neg, bint no sign:                            return -1
+     //
+
