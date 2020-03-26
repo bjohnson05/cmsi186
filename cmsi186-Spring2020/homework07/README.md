@@ -3,6 +3,10 @@
 ### [Familiarity with Probability Estimation]
 ### Assignment Due: Monday, 2019-04-20
 
+<blockquote>
+Learning Outcomes: Students will (1) implement probability calculation which solves a well-known problem; (2) be able to write their own test framework code from scratch; (3) get a chance to think analytically about a problem and use their program to verify their thinking; and (4) get more practice documenting their code using the <q>javadocs</q> tool. 
+</blockquote>
+
 #### For this homework, you must accomplish the following activities:
 
 Make a Java program, <em><code>BirthdaySolver.java</code></em>, for estimating the probability that among <code>N</code> randomly chosen people, at least two share a birthday.
