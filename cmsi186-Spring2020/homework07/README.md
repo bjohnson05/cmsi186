@@ -6,16 +6,17 @@
 #### For this homework, you must accomplish the following activities:
 
 Make a Java program, <em><code>BirthdaySolver.java</code></em>, for estimating the probability that among <code>N</code> randomly chosen people, at least two share a birthday.
-* The value of N will be specified by args[0] from the command line
-* Your program should simulate one million experiments
-* You should ignore birthdays that fall on February 29, e.g., assume that they have been uniformly distributed among the other days of the year
-* Solve this problem analytically, as well &emdash; and make sure that your program and your analysis confirm one another!
+* The value of <code><em>N</em></code> will be specified as a command line argument
+* You should ignore birthdays that fall on February 29, e.g., assume that they have been uniformly distributed among the other 365 days of the year
+* Solve this problem analytically in your head, as well as programmatically &ndash; and make sure that your program and your analysis confirm one another!
+* Your program should be able to simulate one million experiments or more, and provide feedback to the user if it is taking a long time
+* Make sure that you handle any errors that arise from user input, as usual
+* Write a test harness Java program which is similar to the ones you have been provided this semester and use it to run your program.  Redirect its output to a text file.
+* Write a short research report that explains, in one paragraph, how your mental analysis of the problem helped you develop your program.
+* Use the <q>javadocs</p> tool to produce a set of documentation for this project; make sure there are no errors when you run the tool on your program code.
 
 ### Notes:
-1. Try several different values for the number of people
-1. Be sure to try edge cases to make sure they are handled appropriately; e.g., use zero people, a negative number of people, and so on
-1. Try writing a command line <q>shell script</q> file to run the program many times and display the output of each run
-1. Try repeating tests with the same number of people to see if your program outputs consistent results
+1. No notes for this assignment at this time.
 
 Submission Guidelines: Make a sub-directory in your repository as mentioned above, called homework07 and commit your source code into it. DON'T FORGET TO ADD A COMMIT COMMENT!
 
