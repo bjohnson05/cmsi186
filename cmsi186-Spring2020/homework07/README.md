@@ -3,7 +3,7 @@
 ### Assignment Due: Monday, 2019-04-20
 
 <blockquote>
-Learning Outcomes: Students will (1) implement probability calculation which solves a well-known problem; (2) be able to write their own test framework code from scratch; (3) get a chance to think analytically about a problem and use their program to verify their thinking; and (4) get more practice documenting their code using the <q>javadocs</q> tool. 
+Learning Outcomes: Students will (1) implement probability calculation which solves a well-known problem; (2) be able to write their own test framework code from scratch; (3) get a chance to think analytically about a problem and use their program to verify their thinking; (4) practice with using try/catch blocks in a different way than they are used to doing; and (5) get more practice documenting their code using the <q>javadocs</q> tool. 
 </blockquote>
 
 #### For this homework, you must accomplish the following activities:
@@ -17,6 +17,8 @@ Make a Java program, <em><code>BirthdaySolver.java</code></em>, for estimating t
 * Write a test harness Java program which is similar to the ones you have been provided this semester and use it to run your program.  Redirect its output to a text file.
 * Write a short research report that explains, in one paragraph, how your mental analysis of the problem helped you develop your program.
 * Use the <q>javadocs</p> tool to produce a set of documentation for this project; make sure there are no errors when you run the tool on your program code.
+
+You will submit your program, your test harness, and your research report as the products for this assignment.
 
 ### Notes:
 1. No notes for this assignment at this time.
