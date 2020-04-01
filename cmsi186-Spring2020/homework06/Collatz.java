@@ -13,6 +13,7 @@
  *   Ver      Date     Modified by:  Reason for change or modification
  *  -----  ----------  ------------  ---------------------------------------------------------------------
  *  1.0.0  2017-04-17  B.J. Johnson  Initial writing and begin coding
+ *  1.0.1  2019-04-01  B.J. Johnson  Modified to remove debug/info checks and println outputs for clarity
  *
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -25,8 +26,6 @@ public class Collatz {
    private int     working    = 15000;
    private BrobInt calcValue  = null;
    private BrobInt startValue = null;
-   private static final boolean DEBUG_ON = false;
-   private static final boolean INFO_ON  = false;
 
   /**
    * Constructor doesn't really do anything
@@ -61,26 +60,17 @@ public class Collatz {
                           " for Brobdingangian Integer: " + c.startValue.toString() + "\n\n" );
 
       while( ! c.calcValue.equals( BrobInt.ONE )) {
-         if( INFO_ON ) { System.out.println( "  At top of loop....." ); }
 
          // determine if this is even or odd; done by halving the number, then multiplying the result
          //   by TWO.  If the result is equal to the original, it's EVEN, if not it's ODD.
          if( c.calcValue.equals( new BrobInt( h.halve( c.calcValue.toString() ) ).multiply( BrobInt.TWO ) ) ) {
-            if( DEBUG_ON ) { System.out.println( "    EVEN: Remainder of " + c.calcValue.toString() +
-                                " and BrobInt.TWO: "  + c.calcValue.remainder( BrobInt.TWO ).toString() ); }
             c.calcValue = new BrobInt( h.halve( c.calcValue.toString() ) );
          } else {
-            if( DEBUG_ON ) { System.out.println( "    ODD: Remainder of " + c.calcValue.toString() +
-                                   " and BrobInt.TWO: "  + c.calcValue.remainder( BrobInt.TWO ).toString() ); }
-
-               c.calcValue = c.calcValue.multiply( BrobInt.THREE );
-            if( DEBUG_ON ) { System.out.println( "    ODD: multiplied by three, value is: " + c.calcValue.toString() ); }
-               c.calcValue = c.calcValue.add( BrobInt.ONE );
-            if( DEBUG_ON ) { System.out.println( "    ODD: added one, value is: " + c.calcValue.toString() ); }
+            c.calcValue = c.calcValue.multiply( BrobInt.THREE );
+            c.calcValue = c.calcValue.add( BrobInt.ONE );
          }
 
          c.stepCount++;
-         if( INFO_ON ) { System.out.println( "     end of loop: calcValue is : " + c.calcValue.toString() + " and stepCount is: " + c.stepCount ); }
       }
       System.out.println( "   The calculation took " + c.stepCount + " steps to reach '1'...\n\n" );
       System.exit( 0 );
