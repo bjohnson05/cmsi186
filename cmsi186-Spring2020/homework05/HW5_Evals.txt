@@ -1,0 +1,99 @@
+
+Evaluation for homework 05: SkateRamp
+
+Only SkateRamp.java is required, you may do all code in one file
+Includes running "runtests" function for unit method tests
+Includes running automated skateramptests.bat or skateramptests.sh
+   View skateramptests.bat to see test parameters used
+   Evaluation results are at the bottom of this file
+   Current course grade is also at the bottom of the file
+Optional second "Integrators.java" file earns one EC point
+==============================================================
+
+The SkateRamp.java file must exist.  It must have a main method and needs
+to handle at a minimum the "runtests", the "poly", and the "sin" functions
+on the command line.  In addition there are argument validations that must
+be handled including [5 pts.]:
+
+   - detecting no arguments
+   - detecting the correct number of arguments
+   - arguments are of correct type after conversion [e.g., no letters]
+   - percentage value set to default if not on command line
+   - percentage validated and set properly if it IS on the command line
+
+There may be an optional "Integrators.java" class file to handle the math
+of the integrations.  If it exists, that is one EC point.
+
+At minimum, there should be methods to handle the "poly" and the "sin"
+integration functions.  Those are worth one point each.  Any other methods
+for integrating other functions earn one EC point each, with no maximum.
+If the two required methods are actually done in the main as part of the
+"switch" or "if-else" statement, that is fine, they still earn the points,
+with the caveat that it is better to make them methods next time.
+
+The "runMyTests" method must exist and must allow for the tests to be run
+using the command line "pseudo-function" called "runmytests".  There must
+be AT LEAST one test for each of the functions that are implemented, which
+means a minimum of three: validateArgs(), poly(), and sin(). [3 pts.]
+
+Testing will be done using the script files that were shown to you during
+the development of your project.  There are 6 tests for input validity,
+worth 6 points.  There are 5 tests for up to 2nd degree polynomials, for
+another 5 points, and one test for a 5th order polynomial, worth one
+point.  There are 5 tests for the sin function, worth a total of 5 points.
+There are tests included for cos, tan, sqrt, log, and exp, just to see if
+they run; however, the credit is for the implementation of the functions
+so getting the right answer AND implementing the function code gives a
+TOTAL of one point.
+
+There must be at least one file in the repo: the Riemann.java file.
+
+Your source code style is important for this project, and will continue
+to be so for the rest of the semester.  Make sure you indent properly
+and consistently, that your variables have good names, there is NO code
+that is left in that is not needed [commented out], and that you have
+comments to help explain what the code does without being overly
+loquatious.
+
+A total of one point each for the following, except where noted:
+
+SkateRamp.java          : exists and compiles               - 1/1 point
+validations method      : exists                            - 1/1 point
+main method             : runs properly, no errors          - 1/1 point
+runMyTests method       : exists, tests three methods       - 1/1 points
+
+Integrators class [EC]  : if it exists/compiles [optional]  - 1/1 point EC
+
+Integrate polynomials   : method exists in some file        - 1/1 point
+Integrate sine          : method exists in some file        - 1/1 point
+
+Integrate cosine        : method exists in some file        - 1/1 point EC
+Integrate tangent       : method exists in some file        - 1/1 point EC
+Integrate log           : method exists in some file        - 1/1 point EC
+Integrate exp           : method exists in some file        - 1/1 point EC
+Integrate sq. root      : method exists in some file        - 1/1 point EC
+Integrate compos.       : method exists in some file        - 1/1 point EC
+
+runmytests method       : method tests two required func.   - 2/2 point
+tests input valid       : passes all six checks             - 6/6 points
+tests for 2nd deg poly  : gets [nearly] correct on 5 tests  - 5/5 points
+test for 5th deg poly   : gets [nearly] correct on test     - 1/1 point
+test for sin            : gets [nearly] correct on tests    - 5/5 points
+SkateRamp.java in repo  : one file [gimme]                  - 1/1 point
+Coding style            : as noted in text above            - 5/5 points
+
+Total of required activities: 31 out of 31 = 100% which is an A-plus
+
+It is possible to get more than 100% on this assignment.  The total percent
+will be applied to the 15% that this exercise is worth overall.  For example,
+if you get the maximum credit, you will get 37 out of 30, which is 123.33%.
+
+Seven EC points added to total:  38 out of 31 = 122.58% which is an A-plus
+
+Detailed comments:
+==================
+
+
+Your score: 31.0 out of 31.0 = 100.00% which is an A-plus.
+
+Sorry for the bad news, better luck next time!
