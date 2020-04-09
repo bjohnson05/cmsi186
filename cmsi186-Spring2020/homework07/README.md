@@ -20,7 +20,7 @@ Make a Java program, <em><code>BirthdaySolver.java</code></em>, for estimating t
    * the approximation made using the number of experiments
 * Create a <q>test harness</q> batch file or shell script that will run your program at least 20 times, with varying values for <code>N</code> and <code>number of experiments</code> and output the results to a <q>testresults.txt</q> file using the redirection operator from the command line ["<code>&gt;&gt;</code>"].
 * Write a short research report that explains, in one paragraph, how your mental analysis of the problem helped you develop your program.
-* Use the <q>javadocs</p> tool to produce a set of documentation for this project; make sure there are no errors when you run the tool on your program code.
+* Use the "javadocs" tool to produce a set of documentation for this project; make sure there are no errors when you run the tool on your program code.
 
 You will submit your program, your testresults.txt file, your test harness script, and your research report as the products for this assignment.
 
