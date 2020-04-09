@@ -13,7 +13,7 @@ Make a Java program, <em><code>BirthdaySolver.java</code></em>, for estimating t
 * You should ignore birthdays that fall on February 29, e.g., assume that they have been uniformly distributed among the other 365 days of the year
 * Solve this problem analytically in your head, as well as programmatically &ndash; and make sure that your program and your analysis confirm one another!
 * Your program should be able to simulate one million experiments or more, and provide feedback to the user if it is taking a long time.  The number of experiments will be specified as a second command line argument, with a default value of 100,000.
-* Make sure that you handle any errors that arise from user input, as usual
+* Make sure that you handle any errors that arise from user input, as usual.  NOTE: my test script will check for input errors that your code should catch!
 * You are free to write as few or as many extra methods as you see fit
 * Your program must output TWO NUMBERS:
    * the actual probability calculation as described in class
