@@ -3,7 +3,7 @@
 ### Assignment Due: Monday, 2019-04-20
 
 <blockquote>
-Learning Outcomes: Students will (1) implement probability calculation which solves a well-known problem; (2) be able to write their own test framework code from scratch; (3) get a chance to think analytically about a problem and use their program to verify their thinking; (4) practice with using try/catch blocks in a different way than they are used to doing; and (5) get more practice documenting their code using the <q>javadocs</q> tool. 
+Learning Outcomes: Students will (1) implement probability calculation which solves a well-known problem; (2) be able to write their own test framework code from scratch; (3) get a chance to think analytically about a problem and use their program to verify their thinking; and (4) get practice documenting their code using the <q>javadocs</q> tool. 
 </blockquote>
 
 #### For this homework, you must accomplish the following activities:
@@ -14,11 +14,15 @@ Make a Java program, <em><code>BirthdaySolver.java</code></em>, for estimating t
 * Solve this problem analytically in your head, as well as programmatically &ndash; and make sure that your program and your analysis confirm one another!
 * Your program should be able to simulate one million experiments or more, and provide feedback to the user if it is taking a long time
 * Make sure that you handle any errors that arise from user input, as usual
-* Write a test harness Java program which is similar to the ones you have been provided this semester and use it to run your program.  Redirect its output to a text file.
+* You are free to write as few or as many extra methods as you see fit
+* Your program must output TWO NUMBERS:
+   * the actual probability calculation as described in class
+   * the approximation made using the number of experiments
+* Create a <q>test harness</q> batch file or shell script that will run your program at least 20 times, with varying values for <code>N</code> and <code>number of experiments</code> and output the results to a <q>testresults.txt</q> file using the redirection operator from the command line ["<code>&gt;&gt;</code>"].
 * Write a short research report that explains, in one paragraph, how your mental analysis of the problem helped you develop your program.
 * Use the <q>javadocs</p> tool to produce a set of documentation for this project; make sure there are no errors when you run the tool on your program code.
 
-You will submit your program, your test harness, and your research report as the products for this assignment.
+You will submit your program, your testresults.txt file, your test harness script, and your research report as the products for this assignment.
 
 ### Notes:
 1. No notes for this assignment at this time.
