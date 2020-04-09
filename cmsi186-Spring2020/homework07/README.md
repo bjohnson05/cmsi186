@@ -1,5 +1,5 @@
 # CMSI 186: Homework Assignment #7
-## More Problems About Estimation
+## Problems About Probability Estimation
 ### Assignment Due: Monday, 2019-04-20
 
 <blockquote>
