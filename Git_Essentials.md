@@ -15,6 +15,7 @@ Note that if you are not familiar with the command line, console, or terminal wi
 ### On Windows computers:
 1. point a browser to [this download link](https://git-scm.com/download/win)
 1. save the file to your hard drive
+1. virus scan the file for insurance
 1. open the file by double-clicking it
 1. if asked to provide administrator privilege, do so
 1. click "Next"
