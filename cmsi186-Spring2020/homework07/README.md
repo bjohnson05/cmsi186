@@ -26,6 +26,14 @@ You will submit your program, your testresults.txt file, your test harness scrip
 
 ### Notes:
 1. No notes for this assignment at this time.
+1. There are some pictures, though:
+   1. [birthdaysolver01.jpg](http://bjohnson.lmu.build/private/birthdayproblem01.jpg)
+   1. [birthdaysolver02.jpg](http://bjohnson.lmu.build/private/birthdayproblem02.jpg)
+   1. [birthdaysolver03.jpg](http://bjohnson.lmu.build/private/birthdayproblem03.jpg)
+   1. [birthdaysolver04.jpg](http://bjohnson.lmu.build/private/birthdayproblem04.jpg)
+   1. [birthdaysolver05.jpg](http://bjohnson.lmu.build/private/birthdayproblem05.jpg)
+   1. [birthdaysolver06.jpg](http://bjohnson.lmu.build/private/birthdayproblem06.jpg)
+   
 
 Submission Guidelines: Make a sub-directory in your repository as mentioned above, called homework07 and commit your source code into it. DON'T FORGET TO ADD A COMMIT COMMENT!
 
