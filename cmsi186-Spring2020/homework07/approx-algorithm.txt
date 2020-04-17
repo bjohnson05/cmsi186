@@ -10,6 +10,7 @@
             use that as index into the checklist array
             if that index is "used" in the array
                increment the counter
+               break out of the inner loop
             else if NOT used in the array
                set that checklist element to "used"
          end inner loop
