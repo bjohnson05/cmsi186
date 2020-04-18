@@ -80,13 +80,15 @@ public class FileDemo {
       try {
          myLineArray = fd.getMazeFromFile( "mazediagram.txt" );
       }
-      catch( IOException ioe ) { System.out.println( "\n   Error on open/read... exiting\n" ); System.exit( -1 ); }
+      catch( IOException ioe ) {
+         System.out.println( "\n   Error on open/read... exiting\n" );
+         System.exit( -1 );
+      }
 
+     // output the results to the display then exit
       for( int index = 0; index < myLineArray.length; index++ ) {
          System.out.println( myLineArray[index] );
       }
-
-
       System.exit( 0 );
 
    }
