@@ -16,7 +16,10 @@ import java.io.IOException;
  *    contents into a 1D array of String objects.
  * <p>
  * This is a demonstrator only and does not *DO* anything with the array other
- *    than print it to the display
+ *    than print it to the display; however, it does contain a method that will read
+ *    the named file and return an array of Strings contining the maze description.
+ *    I left the name to be "FileDemo" because it includes a main method that shows
+ *    how it can be used.
  */
 public class FileDemo {
 
@@ -57,6 +60,7 @@ public class FileDemo {
      //  there MUST be a line containing "EOF" in a properly formatted file
       lineArray[index] = br.readLine();
       while( !(lineArray[index].contains( "EOF" )) ) {
+         lineArray[index] = lineArray[index].substring( (lineArray[index].indexOf( '\"' ) + 1), lineArray[index].length() - 2 );
          index++;
          lineArray[index] = br.readLine();
       }
