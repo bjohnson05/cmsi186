@@ -1,32 +1,14 @@
-12 12
- maze[0] = "+-+-+-+-+-+-+-+-+-+-+-+-+";
- maze[1] = "|   |O|   |   |O|      C|";
- maze[2] = "+ + + + + + + + + +-+-+ +";
- maze[3] = "| | | | |   | | | |     |";
- maze[4] = "+ + + + +-+-+ + + + +-+-+";
- maze[5] = "| | | |     | | |O|     |";
- maze[6] = "+ + + +-+-+ + + +-+-+-+ +";
- maze[7] = "| |   |     |           |";
- maze[8] = "+ +-+-+ +-+-+-+ +-+-+-+-+";
- maze[9] = "|     | |       |       |";
-maze[10] = "+-+-+ + + + +-+-+ +-+-+ +";
-maze[11] = "|     |   | |   | |     |";
-maze[12] = "+ +-+-+-+-+ + + + + +-+-+";
-maze[13] = "|             |   |     |";
-maze[14] = "+-+-+-+-+-+-+-+-+-+-+-+ +";
-maze[15] = "|               |       |";
-maze[16] = "+ +-+-+-+-+-+-+ + +-+-+-+";
-maze[17] = "|             | | |     |";
-maze[18] = "+-+-+-+-+-+-+ + + + +-+ +";
-maze[19] = "|       |   | | | | |   |";
-maze[20] = "+ +-+-+ + + + + + + + +-+";
-maze[21] = "|     | | | | | |   |   |";
-maze[22] = "+-+-+ + + + + + +-+-+-+ +";
-maze[23] = "|M    |   |   |         |";
-maze[24] = "+-+-+-+-+-+-+-+-+-+-+-+-+";
+03 03
+ maze[0] = "+-+-+-+";
+ maze[1] = "|   |C|";
+ maze[2] = "+ + + +";
+ maze[3] = "| | | |";
+ maze[4] = "+ + + +";
+ maze[5] = "|M|   |";
+ maze[6] = "+-+-+-+";
 EOF
 
-  // This describes a 12x12 maze, even though it looks like
+  // This describes a 3x3 maze, even though it looks like
   //  it's a rectangle because of the aspect ratio of the
   //  characters used.  The entry to the maze is from the bottom
   //  left at the "S" and the exit is on the side at the top

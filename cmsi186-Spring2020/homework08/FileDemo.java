@@ -32,7 +32,7 @@ public class FileDemo {
    * @param filename String that contains the name of the file; file is assumed to be
    *           in the same directory as the program which calls this method
    */
-   public String[] getMazeFromFile( String filename ) throws IOException {
+   public static String[] getMazeFromFile( String filename ) throws IOException {
 
      // line to read array sizes from file
       String sizes = null;
@@ -77,12 +77,13 @@ public class FileDemo {
    public static void main( String [] args ) {
 
       System.out.println( "\n   Howdy li'l pardner! \n\n" );
-      FileDemo fd = new FileDemo();
+      // FileDemo fd = new FileDemo();
       String [] myLineArray = null;
 
      // try the get method and catch any errors
       try {
-         myLineArray = fd.getMazeFromFile( "mazediagram.txt" );
+         // myLineArray = fd.getMazeFromFile( "mazediagram.txt" );
+         myLineArray = FileDemo.getMazeFromFile( "mazediagram.txt" );
       }
       catch( IOException ioe ) {
          System.out.println( "\n   Error on open/read... exiting\n" );
