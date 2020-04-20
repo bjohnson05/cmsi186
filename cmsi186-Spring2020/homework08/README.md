@@ -21,7 +21,8 @@ Two circles may intersect at a single point, at two points, or at an unlimited n
    1. Your program must output the parameters for each circle pair that includes the X and Y value of the center and the radius of each circle.
    1. Your program must output whether the circles intersect, and at how many points they meet.  If they meet at more than one point, just state that fact.
 1. You must write a script file called <q>circletest.bat</q> [for windows] or <q>circletest.sh</q> [for mac] that runs your program 20 times with different circle file inputs.
-1. You <em class='underline'>MUST</em> have at least 1 of your 25 test cases check an invalid file name and output a meaningful error message when that occurs
+1. You *MUST* have at least 1 of your 25 test cases check an invalid file name and output a meaningful error message when that occurs
+1. You *MUST* have your script file write the results to a <q>testresults.txt</q> file as we've seen in the past
 
 ### The Problem #2:
 The digital clock in my office has several rows of LED lights on it.  Some of you may have seen it on my bookshelves before the whole COVID-19 situation struck.  This problem is to write a program that will be a duplicate of sorts of that clock's operation.  The clock has three rows of LED's.  The top row is for hours, the middle row is for minutes, and the bottom row is for seconds.
@@ -43,12 +44,13 @@ The digital clock in my office has several rows of LED lights on it.  Some of yo
 1. Part of this problem is for you to do some research and find out if there is an easy way to turn the decimal numbers into String objects that represent the binary equivalents.
 
 ### Solution Submission
-As always, commit your solutions to your repo.  For this assignment you will need at least five files:
+As always, commit your solutions to your repo.  For this assignment you will need at least seven files:
 1. CircleSolver.java</li>
 1. circletest.bat or circletest.sh test file</li>
 1. ClockSolver.java</li>
 1. clocktest.bat or clocktest.sh test file</li>
 1. the circle definition file or files that you use with your CircleSolver program</li>
+1. the two <q>testresults.txt</q> files that contain the test outputs.  Name them as you wish so you can tell them apart.
    
 ### Notes
 1. No notes for this assignment at this time.
