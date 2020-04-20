@@ -8,7 +8,7 @@ Learning Outcomes: Students will (1) get practice with converting decimal number
 
 #### For this homework, you must accomplish the following activities:
 
-For this assignment, there are *TWO* problems, since these are a bit easier&hellip;
+For this assignment, there are *TWO* problems, since these are a bit easier. <em>Don't forget to Javadoc your code&hellip;
 
 ### The Problem #1:
 Two circles may intersect at a single point, at two points, or at an unlimited number of points when the two circles are coincident (on top of each other).  If the circles do NOT intersect, on circle may be contained entirely within the other, or they may be completely separate.  Your task is to write a program in Java that obtains the parameters for two circles and reports whether they intersect.  For each circle, the inputs should be the X and Y coordinate (on a Cartesian grid) for the center, and the radius of the circle.  The output should be one and only one of the possible configurations listed above, as well as the distance between the two center points.
