@@ -167,12 +167,12 @@ echo ======================================  >> testresults.txt
 @java SoccerSim 200 200 10 10 100 100 -100 -100 150 150 200 200 175 175 -110 -110 20 20 1 1 50 50 -5 -5 0.1 >> testresults.txt
 
 @echo ... Testing SoccerSim valid ball set five balls 1.234 second time slice...
-@echo ...   Should say "not possible @ 13:29.5
+@echo ...   Should say "not possible @ 13:29.5"
 echo .                                       >> testresults.txt
 echo .                                       >> testresults.txt
 echo ======================================  >> testresults.txt
 echo ... Testing SoccerSim valid ball set five balls 1.234 second time slice...>> testresults.txt
-echo ...   Should say "not possible @ 13:29.5  >> testresults.txt
+echo ...   Should say "not possible @ 13:29.5"  >> testresults.txt
 echo ======================================  >> testresults.txt
 @java SoccerSim 200 200 10 10 100 100 -100 -100 150 150 200 200 175 175 -110 -110 20 20 1 1 50 50 -5 -5 1.234  >> testresults.txt
 

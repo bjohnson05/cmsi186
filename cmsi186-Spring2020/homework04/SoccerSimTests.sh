@@ -1,6 +1,6 @@
 
-# rm testresults.txt
-# javac *.java
+rm testresults.txt
+javac *.java
 echo ... Testing Ball class ...
 echo .                                       >> testresults.txt
 echo .                                       >> testresults.txt
