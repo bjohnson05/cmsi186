@@ -1,6 +1,6 @@
 # CMSI 186: Homework Assignment #3
 ## Problems About Dice [Familiarity with Java Classes]
-### Assignment Due: Wednesday, 2019-02-12
+### Assignment Due: Thursday, 2020-10-01
 
 ## For this homework, accomplish the following activities:
 
