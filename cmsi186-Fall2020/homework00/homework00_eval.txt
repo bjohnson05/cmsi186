@@ -1,0 +1,34 @@
+
+Evaluation for homework00
+=========================
+
+This assignment is designed to verify you have your environment set up correctly
+for the rest of the semester.
+
+Per the specifications, you will need to have the following items in place and
+working.  You will achieve one point for each item for a total of 5 points for
+the entire assignment.
+
+Here is the breakdown:
+
+Java works - you have a working java installation
+Greeter runs - the Greeter.java class you submitted compiles
+                 and runs with no errors
+Repo created - your GitHub repo is created and you have included your
+                 instructor as a collaborator
+Editor works - you have a working text editor to use for your code
+Greeter in Repo - your Greeter.java file has been committed in your repo
+
+
+Java works          1 pt.
+Greeter runs        1 pt.
+Repo created        1 pt.
+Editor works        1 pt.
+Greeter in Repo     1 pt.
+
+
+You have 5 out of 5 for 100% which is an A-plus.
+
+
+Nice work!  Now, on to homework01.
+
