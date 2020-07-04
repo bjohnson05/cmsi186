@@ -8,5 +8,7 @@ Also has code for Spring 2018, which is the current version.  Everything in ther
 
 Now updated for Spring 2019, **WAY** ahead of schedule, but I was bored one day and had to do something to keep my mind occupied so I didn't fall asleep in my chair and embarrass myself by drooling on my keyboard...
 
+Now updated for Spring 2020. as well as for Fall 2020.
+
 Here is a [LINK](https://bjohnson.lmu.build/cmsi186web/) to the current version of the Class Web Site
 
