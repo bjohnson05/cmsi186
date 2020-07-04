@@ -4,7 +4,7 @@
 This is homework number "zero", because as we all know, good computer scientists ALWAYS start counting at zero.
 
 <blockquote>
-Learning outcomes:  the intent of this homework is to verify that you have an understanding of the following topics:
+  <strong>Learning outcomes</strong>:  the intent of this homework is to verify that you have an understanding of the following topics:
 
 - You have a working Java development environment
 - You have a repository in GitHub
