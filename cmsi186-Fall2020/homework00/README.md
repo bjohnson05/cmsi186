@@ -2,13 +2,16 @@
 ## Stuff to Get You Started [Setting Up Your Environment]
 
 This is homework number "zero", because as we all know, good computer scientists ALWAYS start counting at zero.
-The intent of this homework is to verify that you have an understanding of the following topics:
+
+<blockquote>
+Learning outcomes:  the intent of this homework is to verify that you have an understanding of the following topics:
 
 - You have a working Java development environment
 - You have a repository in GitHub
 - Your repo allows me access as a contributor so I can upload evaluations, &c.
 - You understand making a simple class file
 - You understand compiling the class file and running the resulting program
+</blockquote>
 
 ### For this homework, accomplish the following activities:
 
