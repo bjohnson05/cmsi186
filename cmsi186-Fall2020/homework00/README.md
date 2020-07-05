@@ -5,13 +5,13 @@ This is homework number "zero", because as we all know, good computer scientists
 
 <blockquote>
   <strong>Learning outcomes</strong>:  the intent of this homework is to verify that you have an understanding of the following topics:
+</blockquote>
 
 - You have a working Java development environment
 - You have a repository in GitHub
 - Your repo allows me access as a contributor so I can upload evaluations, &c.
 - You understand making a simple class file
 - You understand compiling the class file and running the resulting program
-</blockquote>
 
 ### For this homework, accomplish the following activities:
 
