@@ -24,6 +24,6 @@ Not to worry! With the *command line*, you'll have them straightened out in no t
 
 ## What to turn in
 
-0. Write down all the commands you used to organize the file.  Don't worry about efficiency for now ~ you should feel free to explore!  Include commands such as ```ls``` or ```pwd``` or ```dir``` or ```ren``` that helped you to figure out where everything was located.
+1. Write down all the commands you used to organize the file.  Don't worry about efficiency for now ~ you should feel free to explore!  Include commands such as ```ls``` or ```pwd``` or ```dir``` or ```ren``` that helped you to figure out where everything was located.
 1. If you did any extensions, write down the commands you used for those as well.
-2. Push all the directories with their newly sorted files to your GitHub repo under your ```homework01``` folder/directory.
+1. Push all the directories with their newly sorted files to your GitHub repo under your ```homework01``` folder/directory.
