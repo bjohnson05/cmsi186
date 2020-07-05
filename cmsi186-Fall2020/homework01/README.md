@@ -21,7 +21,7 @@ Not to worry! With the *command line*, you'll have them straightened out in no t
 
 1. If you are unsure what items go with what artists or categories, feel free to use your favorite search engine to look them up!
 1. Once you're sure everything is in the right place, brainstorm other genres, artists, and albums that you want to listen to, and add them into your file tree!
-1. Mix up all of your files again, then make your way into a song/album/artist of your choice.  Reorganize the files again, while **staying** in that movie.
+1. Mix up all of your files again, then make your way into a song/album/artist of your choice.  Reorganize the files again, while **staying** in that same album or artist directory.
 
 ## What to turn in
 
