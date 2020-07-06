@@ -8,60 +8,65 @@
 
 </blockquote>
 
-## For this homework, accomplish the following activities:
+### For this homework:
+
+...you will create a dice rolling game called **_HighRoll_**. The game is to try to make the maximum possible score using a set of dice. Dice in the set can have any number of sides, with the requirement that all dice in the set have the same number of sides. There can be any number of dice in the set from one to an unlimited number. Users will play the game using an on-screen menu from which they will make a selection. After pressing ENTER the program will perform the user's desired operation. To do this, you must accomplish the following activities:
 
 ### First, make public class Die which contains at the very least, the following methods:
 
-1.  **_public Die( int nSides )_**
+1.  **_public Die( int nSides )_**<br />
     // Constructor for a single die with sides numbered 1, 2, …, up to nSides
-1.  **_public int roll()_**
+1.  **_public int roll()_**<br />
     // Returns a value as a result of randomly rolling this die
-1.  **_public int getValue()_**
+1.  **_public int getValue()_**<br />
     // Returns the curent value of this die which resulted from the last roll
-1.  **_public int setSides( int nSides )_**
+1.  **_public int setSides( int nSides )_**<br />
     // change the configuration of this die and return the new number of sides
-1.  **_public String toString()_**
-    // Instance method that returns a string-y representation of THIS die,
-    // e.g., "[11]"
-1.  **_public static String toString()_**
+1.  **_public String toString()_**<br />
+    // Instance method that returns a string-y representation of THIS die, e.g., "[11]"
+1.  **_public static String toString()_**<br />
     // Classwide version of the preceding instance method
-1.  **_public static void main( String[] args )_**
-    // The built-in test program for this class
+1.  **_public static void main( String[] args )_**<br />
+    // The built-in test program for this class<br />
     // TRY TO TEST AT LEAST 10 DIFFERENT CONFIGURATIONS
 
 ### Next, make public class DiceSet which contains at the very least, the following methods:
 
-1.  **_public DiceSet( int k, int n )_**
+1.  **_public DiceSet( int k, int n )_**<br />
     // Constructor for a set of k dice each with n-sides (k ? 1 and n ? four)
-1.  **_public int sum()_**
+1.  **_public int sum()_**<br />
     // Returns the present sum of this set of dice
-1.  **_public void roll()_**
-    // Randomly rolls all of the dice in this set; returns void since it just sets the values
+1.  **_public void roll()_**<br />
+    // Randomly rolls all of the dice in this set; returns void since it just sets the values<br />
     // Use either of the "toString()" methods to get the values in the set
-1.  **_public void rollIndividual( int i )_**
+1.  **_public void rollIndividual( int i )_**<br />
     // Randomly rolls only the ith die in this set [indexed from zero]
-1.  **_public int getIndividual( int i )_**
+1.  **_public int getIndividual( int i )_**<br />
     * Gets the value of the ith die in this set
-1.  **_public String toString()_**
+1.  **_public String toString()_**<br />
     // Returns a string-y representation of this set of dice, e.g., "[3][9][12][4]"
-1.  **_public static String toString( DiceSet ds )_**
+1.  **_public static String toString( DiceSet ds )_**<br />
     // Classwide version of the preceding instance method
-1.  **_public boolean isIdentical( DiceSet ds )_**
+1.  **_public boolean isIdentical( DiceSet ds )_**<br />
     // Returns true iff this set is identical to the set ds passed as an argument<br />
     // with the ordering of the dice in each set is not important
-1.  **_public static void main( String[] args )_**
+1.  **_public static void main( String[] args )_**<br />
     // The built-in test program for this class
 
 ### Finally, make public class file HighRoll.java which uses your dice set to play the game. You will need to have a main that constructs the dice set, has rolls, and displays scores from each roll. The rules are as follows:
 
-1.  Implement a Textual User Interface (TUI) on the command line. This will display a list of options to the user, and will prompt for input. Based on that input your program will do what the user selected, then will display the results, a blank line or two, and then re-display the options.
-    * Option 1 in the list must be: **1. ROLL ALL THE DICE**
-    * Option 2 in the list must be: **2. ROLL A SINGLE DIE**
-    * Option 3 in the list must be: **3. CALCULATE THE SCORE FOR THIS SET**
-    * Option 4 in the list must be: **4. SAVE THIS SCORE AS HIGH SCORE**
-    * Option 5 in the list must be: **5. DISPLAY THE HIGH SCORE**
-    * Option 6 in the list must be: **6. ENTER 'Q' TO QUIT THE PROGRAM**
-1.  For option 2, you may present a second prompt to get the number of the die to roll, or you may handle it as two numbers on the entry. An example of the first method would be to enter a '2' at the prompt, then display a new prompt such as "which die?" and read the user input. An example of the second method would be to read "2 5" to re-roll only die number 5; this method means you must parse the input to get the die index.
+1. Implement a Textual User Interface (TUI) on the command line. This will display a list of options to the user, and will prompt for input.
+1. <strong>Input MUST be a number from 1 to 5</strong>. Based on that input your program will perform the operation the user selected.
+1. <strong>Your program MUST display the results</strong> of each operation, then skip a blank line or two, and then finally must re-display the options menu.
+1. Your program must accept a "Q" character to quit the HighRoll game.  Make your program accept both the uppercase and lowercase character.
+1. Your TUI menu must appear as follows
+    * **1. ROLL ALL THE DICE**
+    * **2. ROLL A SINGLE DIE**
+    * **3. CALCULATE THE SCORE FOR THIS SET**
+    * **4. SAVE THIS SCORE AS HIGH SCORE**
+    * **5. DISPLAY THE HIGH SCORE**
+    * **6. ENTER 'Q' TO QUIT THE PROGRAM**
+1.  For option 2, <strong>you MUST accept a second number as part of the entry</strong>.  For example, your program would read "2 5" to re-roll only die number 5; this method means you must **parse** the input to get the die index [We'll discuss this in class].
 1.  To run the program, you **MUST** start the program using...<br /><br />
     **_java HighRoll &lt;number of dice&gt; &lt;number of sides&gt;_**<br /><br />
 1.  See the notes below.
