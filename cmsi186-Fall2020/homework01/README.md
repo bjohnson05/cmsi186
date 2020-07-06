@@ -1,5 +1,11 @@
 # CMSI homework01 ~ MUSIC MASHUP
 
+<blockquote>
+
+<strong>Learning Outcomes</strong>: Students will (1) understand file system organization; (2) understand and use both absolute and relative names for files and folders; (3) be experienced in using the command line to create, move, rename, copy, and delete files and folders; and (4) create and use script files from the command line to accomplish computing tasks.
+
+</blockquote>
+
 ## Background
 
 Since Dr. Toal likes to play music when you come into class, you would like to make some requests for music that he can play.  He *does* take requests, but only from a certain select set of music categories.
@@ -13,8 +19,8 @@ Not to worry! With the *command line*, you'll have them straightened out in no t
 <strong>For this homework, accomplish the following activities</strong>: 
 1. Use git, either from the command line or from github desktop, and downlad the <q>zip</q> file named <em>music-mashup.zip</em>.  Put the file into your <q>homework01</q> directory [folder] on your local computer's hard drive
 1. Unzip the file on your local drive
-1. Then rearrange all the files and folders to make sure every song artist is in the correct genre folder (note: there might be multiple genres that fit, so feel free to make copies of some artists and put them into multiple genre folders) and that each artist folder has the right artist inside it.  Be careful or you might end up listening to Dolly Parton instead of Nicki Minaj!
-1. You can start by using the GUI (i.e., you can move documents around by clicking and dragging from one folder to another in either Windows or mac O/S), but once you're comfortable doing that, you should face this challenge straight from the [command line](http://bjohnson.lmu.build/cmsi186web/commands.html) using a terminal window.
+1. Then rearrange all the files and folders to make sure every song artist is in the correct genre folder [note: there might be multiple genres that fit, so feel free to make copies of some artists and put them into multiple genre folders] and that each artist folder has the right artist inside it.  Be careful or you might end up listening to Dolly Parton instead of Nicki Minaj!
+1. You can start by using the GUI [i.e., you can move documents around by clicking and dragging from one folder to another in either Windows or mac O/S], but once you're comfortable doing that, you should face this challenge straight from the [command line](http://bjohnson.lmu.build/cmsi186web/commands.html) using a terminal window.
 1. Once everything is in the right place, <em>CONGRATULATIONS</em>!  You've officially learned how to speak <q>computerese</q>. Ready to take it a step further?  Let's talk extensions...
 
 ## Extensions
