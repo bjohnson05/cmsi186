@@ -4,7 +4,9 @@
 ### Assignment Due: Tuesday, 2020-09-22
 
 <blockquote>
-Learning Outcomes</span>: Students will (1) learn to get arguments from the command line; (2) implement some basic control structures in Java; (3) learn to create test scripts for running a program multiple times with different arguments; (4) learn to compare estimated and actual values of an algorithm; and (5) understand a basic algorithm development process.
+
+<strong>Learning Outcomes</strong>: Students will (1) write scripts in the Java programming language with variables, assignments, if-statements, etc.; (2) employ random number generators in Java; (3) build Java programs with multiple methods; (4) use command line arguments in Java; (5) convert between strings and numbers in Java; (6) know when and how to check arguments to methods and throw IllegalArgumentException when necessary; (7) build programs against a test suite; and (8) understand a basic algorithm development process.
+
 </blockquote>
 
 #### For this homework, you must accomplish the following activities
