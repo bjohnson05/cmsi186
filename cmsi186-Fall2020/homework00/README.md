@@ -4,7 +4,9 @@
 This is homework number "zero", because as we all know, good computer scientists ALWAYS start counting at zero.
 
 <blockquote>
+ 
   **Learning outcomes**:  For this homework, you will ensure that your development environment is set up and working properly.  Thus, you should accomplish the following activities:
+  
 </blockquote>
 
 - You have a working Java development environment
