@@ -2,6 +2,12 @@
 ## Problems About Dice [Familiarity with Java Classes]
 ### Assignment Due: Thursday, 2020-10-01
 
+<blockquote>
+
+<strong>Learning Outcomes</strong>: Students will (1) be familiar with Java classes at a basic level; (2) understand the purpose of constructors, fields, and methods; (3) understand and be able to explain the difference between instance (nonstatic) members and class (static) members of a class; (4) create, fill, and index Java arrays; (5) have a basic understanding of the differences between arrays as lists in Java; (6) be able to build and use applications with multiple classes; and (7) create simple textual user interfaces [TUI's].
+
+</blockquote>
+
 ## For this homework, accomplish the following activities:
 
 ### First, make public class Die which contains at the very least, the following methods:
