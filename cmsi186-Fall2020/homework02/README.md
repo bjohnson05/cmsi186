@@ -6,6 +6,7 @@
 <blockquote>
 Learning Outcomes</span>: Students will (1) learn to get arguments from the command line; (2) implement some basic control structures in Java; (3) learn to create test scripts for running a program multiple times with different arguments; (4) learn to compare estimated and actual values of an algorithm; and (5) understand a basic algorithm development process.
 </blockquote>
+
 #### For this homework, you must accomplish the following activities
 
 Make a Java program, <em><code>PiSolver.java</code></em>, for estimating the value of PI using the basic approach and control structure discussed in class.  Specifically, your program should:
