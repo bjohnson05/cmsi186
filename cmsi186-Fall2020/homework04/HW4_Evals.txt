@@ -1,0 +1,98 @@
+
+Evaluation for homework 04: SoccerSim
+
+Ball, Timer/Clock, and SoccerSim programs
+Includes running Timer/Clock main to observe tests
+Includes running automated SoccerSim tests
+   View SoccerSimTests.bat to see test parameters used
+   Evaluation results are at the bottom of this file
+======================================================
+
+The Ball.java class must exist.  There needs to be a constructor that
+takes at least four arguments for the x, y, dx, and dy values.  There
+must be some sort of "move()" method.  There may be some sort of
+"updateSpeed()" method but the computation may be done in move() with
+no penalty.  There must be a "toString()" method to display the info
+about the ball's location and speed.  There should be an "outOfBounds()"
+method, but the computation may be done in the SoccerSim class instead.
+
+The Timer.java or Clock.java class is optional.  If it exists, there is
+one point each for the methods listed and any tests included.  Otherwise
+this is a freebie, but the functionality of the computations MUST show
+up in the SoccerSim.java class file somewhere/somehow.
+
+The SoccerSim.java class must exist.  There needs to be a constructor
+that initializes the simulation.  If the initialization is done in some
+other method, that is OK, and credit is given for the constructor.  There
+must be some method of validating arguments.  This may be done using the
+provided method "validateArgs()" or can be done in the main() method if
+that is desired.  There must be some kind of report facility, which can
+be either a method "report()" [or similar name], or can be done directly
+in the simulation loop in another way.  There needs to be a facility to
+detect collisions, which may be either a method like "collisionCheck()"
+or can be done directly in the simulation loop.  There must be a main()
+method which takes in and handles the argument checking, either directly
+or through a method call to something like "validateArgs()".  There are
+four points total [1 point for each] awarded for argument checking, which
+covers:
+
+   - right number of arguments
+   - arguments are of correct type after conversion (no letters)
+   - time slice set to default if not on command line
+   - time slice validated and set properly if it IS on the command line
+
+Testing includes trials that should show ball[s] come to rest, should
+show two balls colliding, and three others to show the balls all go off
+the field, all come to a stop, and various ball counts are handled in
+the output; the last three are worth a total of three points.
+
+There must be at least two files in the repo: the Ball.java and the
+SoccerSim.java files.  If there is a Timer/Clock.java file it is
+ignored for credit since it was optional, AS LONG AS THE FUNCTIONALITY
+IS AVAILABLE in one of the other two classes.
+
+A total of one point each for the following, except where noted:
+
+class Ball              : exists and compiles no errors     - 1 point
+constructor             : exists, takes arguments           - 1 point
+getSpeed()              : optional, freebie point           - 1 point
+getPosition()           : optional, freebie point           - 1 point
+updateSpeed()           : may be done in move()             - 1 point
+updatePosition/move()   : exists, works correctly           - 1 point
+isOutOfBounds()         : may be done in SoccerSim          - 1 point
+toString()              : exists, works correctly           - 1 point
+main(tests)             : one point if there are any done   - 1 point
+                          zero points if there are none
+                          1/2 point if they don't work properly
+
+class Timer/Clock       : optional, freebie point           - [1 point]
+constructor             : optional, freebie point           - [1 point]
+tick                    : exists, may be done in SoccerSim  - 1 point
+toString                : exists, may be done in SoccerSim  - 1 point
+main(tests)             : optional, freebie point           - [1 point]
+
+class SoccerSim         : exists and compiles no errors     - 1 point
+constructor             : exists, sets up simulation        - 1 point
+validateArgs            : exists, may be done in main()     - 1 point
+report                  : exists, may be done in main()     - 1 point
+collision detect        : exists, may be done in main()     - 1 point
+main                    : exists runs simulation            - 1 point
+param checks (4)        : checks count, type, tick value    - 4 point
+test comes to rest      : works per test batch file         - 1 point
+test collision          : works per test batch file         - 1 point
+remaining tests (3)     : works per test batch file         - 3 point
+
+Files in Git (2)        : Ball.java and SoccerSim.java      - 2 point
+Coding Style (5)        : indentation, naming, comments     - 5 point
+
+
+Total 37 points possible:
+
+YOUR SCORE:  37 out of 37 = 100% which is an A-plus
+
+Detailed omments:
+=================
+
+
+Nice work!
+

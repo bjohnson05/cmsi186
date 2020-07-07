@@ -1,0 +1,50 @@
+
+Evaluation for homework 07: BirthdaySolver.java
+
+BirthdaySolver class file requirements
+   template file, provided with javadoc already done
+   you must handle input from the command line
+   you must handle an optional argument for # experiments
+   you must provide user feedback for lengthy computation
+   you must check for errors in the input arguments
+   you must output two numbers: actual vs. estimated
+   you must have a test harness with at least 20 tests
+   you must output the results to a "testresults.txt" file
+   you must write a paragraph analyzing your observations
+
+==========================================================
+
+Class BirthdaySolver
+BirthdaySolver.java                 1.00/ 1.00
+BirthdaySolver compiles             1.00/ 1.00
+constructor() [gimme]               1.00/ 1.00
+handleInput() [2 pts]               2.00/ 2.00
+calculation [5 pts]                 5.00/ 5.00
+estimation [5 pts]                  5.00/ 5.00
+"run so far" code                   1.00/ 1.00
+test harness exists                 1.00/ 1.00
+20 tests [20 pts]                  20.00/20.00
+javadocs                            1.00/ 1.00
+testresults.txt file                1.00/ 1.00
+research report                     1.00/ 1.00
+minimum 4 files in repo             4.00/ 4.00
+coding style                        1.00/ 1.00
+
+
+Total possible score: 45 points
+
+Your score:  45 of 45 = 100% which is an A-plus
+
+Evaluation
+==========
+
+
+
+
+Nice work!
+
+OR
+
+Feel free to come see me during office hours if you need assistance.
+
+

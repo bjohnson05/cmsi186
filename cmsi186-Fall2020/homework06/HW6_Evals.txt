@@ -1,0 +1,98 @@
+
+Evaluation for homework 06: Brobdingnagian Integer
+   and associated Collatz sequence using BrobInt
+
+BrobInt class
+Includes running BrobIntTester test harness
+Includes running Neptune tester using several numbers
+   View h6.bat or h6.sh to see test parameters used
+   View testresults.txt to see resulting output
+NOTE: "Brobdingnagian Integer" is abbreviated "BrobInt"
+   per the discussion in class
+=======================================================
+
+The BrobInt.java file and the Neptune.java file must exists and compile.  There
+are a total of 7 points awarded for the various methods listed for BrobInt.java.
+There are a total of 9 points awarded for the Collatz.java file including the
+seven test cases.  The BrobIntTester.java file is not required to be in the repo
+but will be added if it is not there.  If you have made any modifications to the
+BrobIntTester.java file which are not reflected in the version that is on *MY*
+repo, PLEASE put a copy of *YOUR* version into *YOUR* repo for use in evaluation.
+
+The BrobIntTester.java file will be used to verify correct operation of your
+BrobInt methods.  The points awarded are as shown below for each of the BrobInt
+operations.  Parial credit is awarded if some of the tests pass and others do
+not; i.e., if four tests get correct answers for subtraction and three don't,
+you will get 4 points for the subtraction tests.
+
+Point distribution is spread to help insure that if you don't get the more
+difficult methods to work, your score will not be impacted as heavily.  For
+example, add and multiply should be straightforward to implement, so they have
+ten tests each for a total of 20 points.  Division is the hardest, so it has
+only four tests.  Remaindering is easy, but requires division to work, so it
+has only two tests.
+
+There are two "gimme" items, one for "equals" tests for which there are three
+points, and one for the Neptune constructor which is worth one point.
+
+For this exercise you are required to have JavaDoc commments in your code.  The
+javadoc tool will be run on your code as explained in class, using a very basic
+automated method.  Mismatches or javadoc errors will be counted against the
+total maximum of two points, in 1/2 point increments.  For example, if your
+code takes an argument that is not listed in the javadocs using a "@param" tag,
+that will cost 1/2 point.  Four such errors mean you will lose the entire
+javadoc credit for the project.
+
+=======================================================
+
+A total of one point each for the following,
+   except where noted with "[of x]":
+
+BrobInt class file:
+BrobInt constructor exists             :   1 point
+validate [method or code] exists       :   1 point
+add method exists                      :   1 point
+subtract method exists                 :   1 point
+multiply method exists                 :   1 point
+divide method exists                   :   1 point
+remainder method exists                :   1 point
+BrobInt compiles                       :   1 point
+BrobInt class tests [1 pt each]        :   0 point [EC]
+
+BrobIntTester class file:
+BrobIntTester compiles:                :   1 point
+constructor tests [of 7]               :   7 points
+add [of 18]                            :  18 points
+   [includes 6 more constructor tests]
+subtract [of 9]                        :   9 points
+multiply [of 14]                       :  14 points
+allZero                                :   1 point
+divide [of 4]                          :   4 points
+remainder [of 2]                       :   2 points
+
+Neptune class file:
+Neptune constructor [gimme]            :   1 point
+Neptune input error handling [gimme]   :   1 point
+Neptune output correct [of 4]          :   4 points
+
+General scores:
+Minimum two files in repo [of 2]       :   2 points
+Coding Style [of 5]                    :   5 points
+Javadocs both files [of 2]             :   2 points
+
+Total possible score: 80 points
+
+Evaluation
+==========
+   your score is 80.00 out of 80.00 = 100.00% which is an A-plus
+   you also got   0.00 extra credit points
+    total score: 80.00 out of 80.00 = 100.00% which is an A-plus
+
+DETAILED COMMENTS:
+==================
+
+
+
+Nice work!
+
+

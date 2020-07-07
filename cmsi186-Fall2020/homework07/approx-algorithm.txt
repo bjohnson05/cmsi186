@@ -1,0 +1,23 @@
+
+
+      initialize a counter to zero
+      for the number of experiments:
+         create a checklist array
+            365 elements [no Feb 29th]
+            all set to indicate "not used"
+         for the number of people:
+            create a random birthday index
+            use that as index into the checklist array
+            if that index is "used" in the array
+               increment the counter
+               break out of the inner loop
+            else if NOT used in the array
+               set that checklist element to "used"
+         end inner loop
+      end outer loop
+
+      when the loops are done:
+         divide the counter by the number of experiments
+         multiply that value by 100
+      display the result
+

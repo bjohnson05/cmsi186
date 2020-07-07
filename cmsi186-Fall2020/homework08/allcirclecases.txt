@@ -1,0 +1,21 @@
+30 20 10   // c1 inside, one point, c1
+30 30 20   // c1 inside, one point, c2
+30 20 15   // c1 inside, two points, c1
+30 30 20   // c1 inside, two points, c2
+30 35 03   // c1 inside, no touch, c1
+30 30 10   // c1 inside, no touch, c2
+30 30 20   // c2 inside, one point, c1
+30 20 10   // c2 inside, one point, c2
+30 30 20   // c2 inside, two points, c1
+30 20 15   // c2 inside, two points, c2
+30 30 10   // c2 inside, no touch, c1
+30 35 03   // c2 inside, no touch, c2
+10 10 10   // circles coincident, c1
+10 10 10   // circles coincident, c1
+00 00 10   // circles outside, one point, c1
+00 20 10   // circles outside, one point, c2
+10 10 10   // circles outside, two points, c1
+20 20 10   // circles outside, two points, c2
+10 10 10   // circles outside, no touch, c1
+40 40 10   // circles outside, no touch, c2
+EOF
