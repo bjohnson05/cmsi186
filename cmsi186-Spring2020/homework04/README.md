@@ -7,7 +7,7 @@
 Learning Outcomes: Students will (1) understand the mathematics of simple motion, collision detection, and friction simulation, and (2) gain further experience with "clean" separation of concerns in an object-oriented design philosophy.
 </blockquote>
 
-In this assignment, you will program a discrete simulation of a physical system in order to answer some questions about its behavior. For this homework, accomplish the following activities to make a Java program, <code>SoccerSim</code>, that solves the following problem:
+In this assignment, you will program a discrete simulation of a physical system in order to answer some questions about its behavior. For this homework, accomplish the following activities to make a Java program, <em>SoccerSim</em>, that solves the following problem:
 
 Simultaneously, on a perfectly flat playground, at time 00:00:00.0 (hrs:mins:secs), an arbitrary number of soccer balls are kicked, all at different speeds and directions. We wish to find out, via a discrete simulation of the system, whether a collision will ever take place, and, if so, where and when. Each ball has a radius of 4.45 inches and weighs one pound. The center of the playground is presumed to be the point (x,y) = (0.0,0.0). The following additional conditions apply:
 
@@ -16,7 +16,11 @@ Simultaneously, on a perfectly flat playground, at time 00:00:00.0 (hrs:mins:sec
 1. If present, a final argument specifies the time slice [in seconds]. If missing, your program should use a default time slice of one second.
 1. There must be a pole, a stationary object somewhere on the field.
 1. As always, your program should check validity of the arguments.
-1. A typical invocation of your program might look like this:
+1. A typical invocation of your program might look like this:<br />
+
+<code>java SoccerSim 300 300 -1 -2 5 10 3 6 10.0</code>
+
+which indicates one ball initially at (300, 300), moving at the rate of one foot west and two feet south per second; just one other ball initially at (5, 10), moving at the rate of three feet east and six feet north per second; with the simulation to be driven by a ten-second time slice.
 
 1. Friction acts to slow each ball down until it comes to rest. Your program should simulate friction as a force that continuously decreases each ball's speed at the rate of one per cent per second until it is traveling less than one inch per second, at which point it comes to rest.
 1. Data about each ball will be given to your program via four consecutive args, namely the x- and y-coordinates of the ball's starting position _[measured in feet]_, followed by its speeds in the x- and y-directions _[measured in feet per second]_.
