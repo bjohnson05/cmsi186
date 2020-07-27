@@ -1,0 +1,42 @@
+05 05
+  maze[0] = "+-+-+-+-+-+";
+  maze[1] = "|   |   |C ";
+  maze[2] = "+ + + + | |";
+  maze[3] = "| | | | | |";
+  maze[4] = "+ + + + | |";
+  maze[5] = "| | | | | |";
+  maze[6] = "+ + + + | |";
+  maze[7] = "| | | | | |";
+  maze[8] = "+ + + + | |";
+  maze[9] = "|M|   |   |";
+ maze[10] = "+-+-+-+-+-+";
+EOF
+
+  // This describes a 5x5 maze, even though it looks more like
+  //  it's a rectangle because of the aspect ratio of the
+  //  characters used.  The entry to the maze is from the bottom
+  //  left at the "S" and the exit is on the side at the top
+  //  right, at the "E".
+  //
+  // The file format is that the first line must have the X and
+  //  the Y sizes, separated by a space.  The values must each
+  //  contain two characters, e.g., "03", not "3". Each successive
+  //  line then defines a row of the maze description.  The dashes
+  //  are horizontal walls, the vertical bars are verticla walls,
+  //  and the Plus signs mark the corners of each "square" or
+  //  "cell" in the maze.
+  //
+  // It is important that the maze description lines are enclosed
+  //  in double quotes as a delimiter to the string on each line.
+  //
+  // It is also important that the description end with a line
+  //  containing the single word "EOF" meaning "End Of File".
+  //  This line is used to let the reading program know it is the
+  //  end of the maze definition.  Everything after that EOF is
+  //  ignored as a comment.
+  //
+  // Each of the cells has an entry and an exit and is an
+  //  object called a "MazeCell".  There are three cells that
+  //  only have an entry, meaning they are "dead ends", marked
+  //  with a "O" in the diagram above.  The "O" will NOT be part
+  //  of the object in the actual MazeSolver program.
