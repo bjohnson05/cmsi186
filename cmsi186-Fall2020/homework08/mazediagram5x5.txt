@@ -4,12 +4,12 @@
  maze[2] = "+ + + + + +";
  maze[3] = "| | | | | |";
  maze[4] = "+ + + + + +";
- maze[3] = "| | | | | |";
- maze[4] = "+ + + + + +";
- maze[3] = "| | | | | |";
- maze[4] = "+ + + + + +";
- maze[5] = "|M|   |   |";
- maze[6] = "+-+-+-+-+-+;
+ maze[5] = "| | | | | |";
+ maze[6] = "+ + + + + +";
+ maze[7] = "| | | | | |";
+ maze[8] = "+ + + + + +";
+ maze[9] = "|M|   |   |";
+maze[10] = "+-+-+-+-+-+;
 EOF
 
   // This describes a 3x3 maze, even though it looks like
