@@ -105,7 +105,7 @@ public class DieAndDiceSetTestHarness {
       // System.out.println( "   Current die side count is: " + d.getSides() );
 
       System.out.println( "TESTING THE DIE CLASS: TESTS ON 11-SIDED DIE USING NEW SIDE COUNT:" );
-      d.setSides( 11 );
+      d = new Die( 11 );
       // System.out.println( "   Resetting - current die side count is now: " + d.getSides() );
       System.out.println( "   Rolling with new side count -- " );
       System.out.println( "      You rolled a " + d.roll() );
@@ -115,14 +115,14 @@ public class DieAndDiceSetTestHarness {
       System.out.println( "      You rolled a " + d.roll() );
 
       System.out.println( "TESTING THE DIE CLASS: TESTS ON 17-SIDED DIE USING NEW SIDE COUNT:" );
-      d.setSides( 17 );
+      d = new Die( 17 );
       // System.out.println( "   Resetting - current die side count is now: " + d.getSides() );
       System.out.println( "   Rolling with new side count -- " );
       System.out.println( "      You rolled a " + d.roll() );
       System.out.println( "      current value is: " + d.getValue() );
 
       System.out.println( "TESTING THE DIE CLASS: TESTS ON 111-SIDED DIE USING NEW SIDE COUNT:" );
-      d.setSides( 111 );
+      d = new Die( 111 );
       // System.out.println( "   Resetting - current die side count is now: " + d.getSides() );
       System.out.println( "   Rolling with new side count -- " );
       System.out.println( "      You rolled a " + d.roll() );
