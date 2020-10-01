@@ -1,6 +1,7 @@
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  *  File name     :  Clock.java
- *  Purpose       :  Provides a class defining methods for the ClockSolver class
+ *  Purpose       :  Provides a class defining methods for use with the ClockSolver class
+ *                     Also provides a "tick()" method and some time conversion methods for SoccerSim
  *  @author       :  B.J. Johnson
  *  Date written  :  2017-02-28
  *  Description   :  This class provides a bunch of methods which may be useful for the ClockSolver class
@@ -15,8 +16,9 @@
  *            Rev      Date     Modified by:  Reason for change/modification
  *           -----  ----------  ------------  -----------------------------------------------------------
  *  @version 1.0.0  2017-02-28  B.J. Johnson  Initial writing and release
- * @ version 2.0.0  2018-03-20  B.J. Johnson  Update to new slightly less complicated version
+ *  @version 2.0.0  2018-03-20  B.J. Johnson  Update to new slightly less complicated version
  *                                              expanded test count somewhat, tweaked test values a bit
+ *  @version 2.0.1  2020-10-01  B.J. Johnson  Updated comments to include SoccerSim
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 import java.text.DecimalFormat;
 
