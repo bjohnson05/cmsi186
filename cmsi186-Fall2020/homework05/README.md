@@ -1,7 +1,7 @@
 
 # CMSI 186: Homework Assignment #5
 ## Problems About Estimations
-### Assignment Due: Wednesday, 2020-03-18
+### Assignment Due: Wednesday, 2020-10-29
 
 <blockquote>
 Learning Outcomes: Students will (1) learn how to describe, explain, and use superclasses and subclasses in Java; (2) explain the mathematical notion of a function and its implementation; and (3) learn how to use looping constructs to subdivide a problem space.
