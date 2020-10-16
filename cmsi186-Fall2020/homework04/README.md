@@ -13,7 +13,7 @@ Simultaneously, on a perfectly flat playground, at time 00:00:00.0 (hrs:mins:sec
 
 1. Data about each ball will be given to your program via four consecutive arguments, namely the x- and y-coordinates of the ball's starting position [measured in feet], followed by its speeds in the x- and y-directions [measured in feet per second].
 1. Friction acts to slow each ball down until it comes to rest. Your program should simulate friction as a force that continuously decreases each ball's speed at the rate of one per cent per second until it is traveling less than one inch per second, at which point it comes to rest.
-1. If present, a final argument specifies the time slice [in seconds]. If missing, your program should use a default time slice of one second.
+1. If present, a final argument specifies the time slice [in seconds]. If missing, your program should use a default time slice of one second.  The maximum value allowed is 1800.0 seconds.
 1. There must be a pole, a stationary object somewhere on the field.
 1. As always, your program should check validity of the arguments.
 1. A typical invocation of your program might look like this:
