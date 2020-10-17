@@ -43,7 +43,7 @@ The following additional conditions apply:
 
 1. Note that some functions [e.g., polynomials] need the additional descriptors [for their coefficients], while other functions [like sin and sqrt] do not necessarily require them.
 1. If the program is invoked incorrectly, it must output a clear, detailed message that explains precisely how to use it.
-1. You may, if you wish, use a single file for this program; however, there are ample opportunities for using other classes as we've seen in previous assignments.
+1. You may, if you wish, use a single file for this program; however, there are ample opportunities for using other classes as we've seen in previous assignments.  Challenge yourself to find good places to break your code into *modules* for better *separation of concerns*.
 1. As always, a comprehensive set of tests should be written before you start coding the other key method(s).  In this case you <strong>MUST</strong> include a method called <code>private static void runMyTests()</code> which will make method calls to a set of test methods.  Since you need a <code>main()</code> method to run your program already, you must put the tests in another method.  Name that method "runMyTests" and make your main program check for that on the command line in <code>args[0]</code>.  In other words, you MUST be able to run your program using:
 
     <code style='margin-left: 5em'>java SkateRamp runMyTests</code>
