@@ -44,8 +44,15 @@ The following additional conditions apply:
 1. Note that some functions [e.g., polynomials] need the additional descriptors [for their coefficients], while other functions [like sin and sqrt] do not necessarily require them.
 1. If the program is invoked incorrectly, it must output a clear, detailed message that explains precisely how to use it.
 1. You may, if you wish, use a single file for this program; however, there are ample opportunities for using other classes as we've seen in previous assignments.
-1. As always, a comprehensive set of tests should be written before you start coding the other key method(s). Since you need a main() method to run your program, put the tests in another method, e.g., <code>private static void runMyTests()</code>, and design your program so that <code>Java SkateRamp runtests</code> runs the tests.
-1. Try to implement as many interesting functions as possible, including:
+1. As always, a comprehensive set of tests should be written before you start coding the other key method(s).  In this case you <strong>MUST</strong> include a method called <code>private static void runMyTests()</code> which will make method calls to a set of test methods.  Since you need a <code>main()</code> method to run your program already, you must put the tests in another method.  Name that method "runMyTests" and make your main program check for that on the command line in <code>args[0]</code>.  In other words, you MUST be able to run your program using:
+
+    <code style='margin-left: 5em'>java SkateRamp runMyTests</code>
+
+and produce appropriate test output like:
+
+    running poly test with 1.0 -2.3 -1.0 3.0 with 0.0001% ~ expected: 123.45, got: 123.45
+  
+7. Try to implement as many interesting functions as possible, including:
    * <code>polynomials</code> of at least degree 2 [you MUST start with this]
    * <code>polynomials</code> of arbitrary degree [which you may as well do when you have the first part working]
    * the <code>sin</code> function [you MUST implement this as well]
