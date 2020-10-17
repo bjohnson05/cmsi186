@@ -13,7 +13,7 @@ The assignment is to make <code>SkateRamp.java</code>, which computes the area o
 
      <code>java SkateRamp args[0] args[1] args[2] … args[k-1] args[k] lowerBound upperBound percent%</code>
      
-where <code>args[0]</code> is the name of a function type; <code>args[1] … args[k]</code> specify the coefficients of the x0 … xk terms of the polynomial; <code>lowerBound</code> and <code>upperBound</code> specify the lower and upper bounds of x, i.e., the range of the X-values that will be used for evaluating; and finally <code>percent%</code> indicates when the program should halt – specifically, the program should halt when two successive approximations are within <code>percent</code> percent of one another.
+where <code>args[0]</code> is the name of a function type; <code>args[1] … args[k]</code> specify the coefficients of the x<sup>0</sup> … x<sup>k</sup> terms of the polynomial; <code>lowerBound</code> and <code>upperBound</code> specify the lower and upper bounds of x, i.e., the range of the X-values that will be used for evaluating; and finally <code>percent%</code> indicates when the program should halt – specifically, the program should halt when two successive approximations are within <code>percent</code> percent of one another.
 [NOTE: the "%" at the end is _required_; the value will be expressed as a number with the "%" at the end, i.e., "2.3%".]
 
 The following additional conditions apply:
