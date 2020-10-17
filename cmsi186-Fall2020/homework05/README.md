@@ -7,14 +7,14 @@
 Learning Outcomes: Students will (1) learn how to describe, explain, and use superclasses and subclasses in Java; (2) explain the mathematical notion of a function and its implementation; and (3) learn how to use looping constructs to subdivide a problem space.
 </blockquote>
 
-This assignment concerns a method of using randomized estimation to determine an area of a non-rectangular object. For this assignment you will make a program to calculate the amount of plywood required to construct a skateboard ramp, as discussed in class.
+This assignment concerns a method of using randomized estimation to determine an area of a non-rectangular object. For this assignment you will make a program to calculate the amount of plywood required to construct a ramp for use in skateboarding, as discussed in class.  The shape of the ramp will be given by an equation.  For example, a "half-pipe" shape would be given by a polynomial equation.
 
-Make <code>SkateRamp.java</code>, which computes the area of the supports for the skateboard "half-pipe" as shown in [this picture](http://bjohnson.lmu.build/private/skateramp.jpg). Your program must be able to handle a description of the shape of the halfpipe using polynomials of arbitary degree, as well as trigonometric and other functions [log, exponential, etc.]. If the program is invoked incorrectly, it should, as usual, output a clear message to tell the user the proper way to run the program. Your program will be invoked as follows:
+The assignment is to make <code>SkateRamp.java</code>, which computes the area of the supports for the skateboard "half-pipe" as shown in [this picture](http://bjohnson.lmu.build/private/skateramp.jpg). Your program must be able to handle a description of the shape of the halfpipe using polynomials of arbitary degree, as well as trigonometric and other functions [log, exponential, etc.]. If the program is invoked incorrectly, it should, as usual, output a clear message to tell the user the proper way to run the program. Your program will be invoked as follows:
 
      <code>java SkateRamp args[0] args[1] args[2] … args[k-1] args[k] lowerBound upperBound percent%</code>
      
 where <code>args[0]</code> is the name of a function type; <code>args[1] … args[k]</code> specify the coefficients of the x0 … xk terms of the polynomial; <code>lowerBound</code> and <code>upperBound</code> specify the lower and upper bounds of x, i.e., the range of the X-values that will be used for evaluating; and finally <code>percent%</code> indicates when the program should halt – specifically, the program should halt when two successive approximations are within <code>percent</code> percent of one another.
-[NOTE: the "%" at the end is required; the value will be expressed as a number with the "%" at the end, i.e., "2.3%".]
+[NOTE: the "%" at the end is _required_; the value will be expressed as a number with the "%" at the end, i.e., "2.3%".]
 
 The following additional conditions apply:
 
