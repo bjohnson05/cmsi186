@@ -1,7 +1,7 @@
 
 # CMSI 186: Homework Assignment #6
 ## Problems About Giant-sized Integer Numbers
-### Assignment Due:<br /> Monday, 2020-04-06
+### Assignment Due:<br /> Tuesday, 2020-11-24
 
 <blockquote>
 Learning Outcomes: Students will (1) implement an independent version of arbitrary-length string arithmetic; (2) understand the concept of breaking a large problem into smaller parts; (3) get a chance to explore the use of big numbers in a real-world way; and (4) learn to document code using the "javadocs" tool.
