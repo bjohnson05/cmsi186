@@ -1,6 +1,6 @@
 # CMSI 186: Homework Assignment #7
 ## Problems About Probability Estimation
-### Assignment Due: Monday, 2020-04-20
+### Assignment Due: Thursday, 2020-12-03
 
 <blockquote>
 Learning Outcomes: Students will (1) implement probability calculation which solves a well-known problem; (2) be able to write their own test framework code from scratch; (3) get a chance to think analytically about a problem and use their program to verify their thinking; and (4) get practice documenting their code using the <q>javadocs</q> tool. 
